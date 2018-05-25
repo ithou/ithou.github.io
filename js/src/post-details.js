@@ -95,7 +95,5 @@ $(document).ready(function () {
       (NexT.motion.middleWares.sidebar = function () {
           NexT.utils.displaySidebar();
       }) : NexT.utils.displaySidebar();
-  }
-}*/
-	NexT.utils.displaySidebar();
-);
+  }*/
+});
