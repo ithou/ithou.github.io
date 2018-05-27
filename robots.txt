@@ -2,7 +2,8 @@ User-agent: *
 Allow: /
 Allow: /archives/
 Allow: /categories/
-Allow: /tags/ 
+Allow: /tags/
+
 Disallow: /vendors/
 Disallow: /js/
 Disallow: /css/
@@ -11,3 +12,4 @@ Disallow: /vendors/
 Disallow: /fancybox/
 
 Sitemap: https://ithou.cc/sitemap.xml
+Sitemap: https://ithou.cc/baidusitemap.xml
