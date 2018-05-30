@@ -2,12 +2,12 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>吾尤爱汝</title>
   
-  <subtitle>希望可以一直写下去</subtitle>
+  <subtitle>可以一直写下去~</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://www.ithou.cc/"/>
+  <link href="https://ithou.cc/"/>
   <updated>2018-05-30T04:27:21.889Z</updated>
-  <id>https://www.ithou.cc/</id>
+  <id>https://ithou.cc/</id>
   
   <author>
     <name>ithou</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Lesson 5 No wrong numbers</title>
-    <link href="https://www.ithou.cc/archives/6c3f84cc.html"/>
-    <id>https://www.ithou.cc/archives/6c3f84cc.html</id>
+    <link href="https://ithou.cc/archives/6c3f84cc.html"/>
+    <id>https://ithou.cc/archives/6c3f84cc.html</id>
     <published>2018-05-29T07:05:58.000Z</published>
     <updated>2018-05-30T04:27:21.889Z</updated>
     
@@ -31,17 +31,17 @@
     
     </summary>
     
-      <category term="英语" scheme="https://www.ithou.cc/categories/%E8%8B%B1%E8%AF%AD/"/>
+      <category term="英语" scheme="https://ithou.cc/categories/%E8%8B%B1%E8%AF%AD/"/>
     
     
-      <category term="新概念英语2" scheme="https://www.ithou.cc/tags/%E6%96%B0%E6%A6%82%E5%BF%B5%E8%8B%B1%E8%AF%AD2/"/>
+      <category term="新概念英语2" scheme="https://ithou.cc/tags/%E6%96%B0%E6%A6%82%E5%BF%B5%E8%8B%B1%E8%AF%AD2/"/>
     
   </entry>
   
   <entry>
     <title>Lesson 4 An exciting trip</title>
-    <link href="https://www.ithou.cc/archives/7310433d.html"/>
-    <id>https://www.ithou.cc/archives/7310433d.html</id>
+    <link href="https://ithou.cc/archives/7310433d.html"/>
+    <id>https://ithou.cc/archives/7310433d.html</id>
     <published>2018-05-24T06:36:13.000Z</published>
     <updated>2018-05-30T04:27:21.891Z</updated>
     
@@ -55,17 +55,17 @@
     
     </summary>
     
-      <category term="英语" scheme="https://www.ithou.cc/categories/%E8%8B%B1%E8%AF%AD/"/>
+      <category term="英语" scheme="https://ithou.cc/categories/%E8%8B%B1%E8%AF%AD/"/>
     
     
-      <category term="新概念英语2" scheme="https://www.ithou.cc/tags/%E6%96%B0%E6%A6%82%E5%BF%B5%E8%8B%B1%E8%AF%AD2/"/>
+      <category term="新概念英语2" scheme="https://ithou.cc/tags/%E6%96%B0%E6%A6%82%E5%BF%B5%E8%8B%B1%E8%AF%AD2/"/>
     
   </entry>
   
   <entry>
     <title>Lesson 3 Please send me a card</title>
-    <link href="https://www.ithou.cc/archives/bbf71de9.html"/>
-    <id>https://www.ithou.cc/archives/bbf71de9.html</id>
+    <link href="https://ithou.cc/archives/bbf71de9.html"/>
+    <id>https://ithou.cc/archives/bbf71de9.html</id>
     <published>2018-05-17T07:53:06.000Z</published>
     <updated>2018-05-30T04:27:21.888Z</updated>
     
@@ -82,17 +82,17 @@
     
     </summary>
     
-      <category term="英语" scheme="https://www.ithou.cc/categories/%E8%8B%B1%E8%AF%AD/"/>
+      <category term="英语" scheme="https://ithou.cc/categories/%E8%8B%B1%E8%AF%AD/"/>
     
     
-      <category term="新概念英语2" scheme="https://www.ithou.cc/tags/%E6%96%B0%E6%A6%82%E5%BF%B5%E8%8B%B1%E8%AF%AD2/"/>
+      <category term="新概念英语2" scheme="https://ithou.cc/tags/%E6%96%B0%E6%A6%82%E5%BF%B5%E8%8B%B1%E8%AF%AD2/"/>
     
   </entry>
   
   <entry>
     <title>Lesson 2 Breakfast or lunch ?</title>
-    <link href="https://www.ithou.cc/archives/3bff1571.html"/>
-    <id>https://www.ithou.cc/archives/3bff1571.html</id>
+    <link href="https://ithou.cc/archives/3bff1571.html"/>
+    <id>https://ithou.cc/archives/3bff1571.html</id>
     <published>2018-05-13T01:44:08.000Z</published>
     <updated>2018-05-30T04:27:21.872Z</updated>
     
@@ -109,17 +109,17 @@
     
     </summary>
     
-      <category term="英语" scheme="https://www.ithou.cc/categories/%E8%8B%B1%E8%AF%AD/"/>
+      <category term="英语" scheme="https://ithou.cc/categories/%E8%8B%B1%E8%AF%AD/"/>
     
     
-      <category term="新概念英语2" scheme="https://www.ithou.cc/tags/%E6%96%B0%E6%A6%82%E5%BF%B5%E8%8B%B1%E8%AF%AD2/"/>
+      <category term="新概念英语2" scheme="https://ithou.cc/tags/%E6%96%B0%E6%A6%82%E5%BF%B5%E8%8B%B1%E8%AF%AD2/"/>
     
   </entry>
   
   <entry>
     <title>Lesson 1 A private conversation</title>
-    <link href="https://www.ithou.cc/archives/46215439.html"/>
-    <id>https://www.ithou.cc/archives/46215439.html</id>
+    <link href="https://ithou.cc/archives/46215439.html"/>
+    <id>https://ithou.cc/archives/46215439.html</id>
     <published>2018-05-12T11:45:32.000Z</published>
     <updated>2018-05-30T04:27:21.893Z</updated>
     
@@ -133,10 +133,10 @@
     
     </summary>
     
-      <category term="英语" scheme="https://www.ithou.cc/categories/%E8%8B%B1%E8%AF%AD/"/>
+      <category term="英语" scheme="https://ithou.cc/categories/%E8%8B%B1%E8%AF%AD/"/>
     
     
-      <category term="新概念英语2" scheme="https://www.ithou.cc/tags/%E6%96%B0%E6%A6%82%E5%BF%B5%E8%8B%B1%E8%AF%AD2/"/>
+      <category term="新概念英语2" scheme="https://ithou.cc/tags/%E6%96%B0%E6%A6%82%E5%BF%B5%E8%8B%B1%E8%AF%AD2/"/>
     
   </entry>
   
