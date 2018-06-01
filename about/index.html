@@ -649,9 +649,10 @@
 
 
 <!-- LOCAL: You can save these files to your site and update links -->
+<!--使用的已经是相应路径下的.css和.js文件-->
   
-  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+  <link rel="stylesheet" href="/lib/gitalk/gitalk.css">
+  <script src="/lib/gitalk/gitalk.min.js"></script>
 <!-- END LOCAL -->
 
     
@@ -659,7 +660,7 @@
       function renderGitalk(){
         var gitalk = new Gitalk({
             owner: 'ithou',
-            repo: '',
+            repo: 'BlogComments',
             clientID: 'b6dccfe9304ee06a647a',
             clientSecret: '32ae27e2a35ba279a18125f6524094e7044a3e55',
             admin: 'ithou',
