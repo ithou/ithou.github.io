@@ -547,6 +547,10 @@
           
 
   
+	<div class="comments" id="comments">
+      <div id="gitalk-container"></div>
+    </div>
+  
 
 
         </div>
@@ -882,6 +886,35 @@
 
 
 
+
+
+
+
+
+<!-- LOCAL: You can save these files to your site and update links -->
+  
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<!-- END LOCAL -->
+
+    
+      <script type="text/javascript">
+      function renderGitalk(){
+        var gitalk = new Gitalk({
+            owner: 'ithou',
+            repo: 'BlogComments',
+            clientID: 'b6dccfe9304ee06a647a',
+            clientSecret: '32ae27e2a35ba279a18125f6524094e7044a3e55',
+            admin: 'ithou',
+            
+              distractionFreeMode: 'true'
+            
+            });
+        gitalk.render('gitalk-container');
+      }
+      renderGitalk();
+      </script>
+    
 
 
 
