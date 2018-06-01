@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://ithou.cc/about/about.html</loc>
+    
+    <lastmod>2018-06-01T06:13:50.991Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://ithou.cc/about/index.html</loc>
+    
+    <lastmod>2018-06-01T06:13:10.346Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://ithou.cc/archives/6c3f84cc.html</loc>
     
     <lastmod>2018-05-30T15:05:28.401Z</lastmod>
@@ -33,13 +47,6 @@
     <loc>https://ithou.cc/archives/3bff1571.html</loc>
     
     <lastmod>2018-05-30T04:27:21.872Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://ithou.cc/about/index.html</loc>
-    
-    <lastmod>2018-05-25T11:00:56.339Z</lastmod>
     
   </url>
   
