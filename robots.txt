@@ -11,5 +11,6 @@ Disallow: /css/
 Disallow: /fonts/
 Disallow: /vendors/
 Disallow: /fancybox/
+
 Sitemap: https://ithou.cc/sitemap.xml
 Sitemap: https://ithou.cc/baidusitemap.xml
