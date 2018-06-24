@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ithou.cc/"/>
-  <updated>2018-06-24T07:40:38.494Z</updated>
+  <updated>2018-06-24T08:00:16.692Z</updated>
   <id>https://ithou.cc/</id>
   
   <author>
@@ -20,18 +20,18 @@
     <title>Hive重点</title>
     <link href="https://ithou.cc/archives/178d9c62.html"/>
     <id>https://ithou.cc/archives/178d9c62.html</id>
-    <published>2018-06-24T06:02:00.000Z</published>
-    <updated>2018-06-24T07:40:38.494Z</updated>
+    <published>2018-06-24T11:02:00.000Z</published>
+    <updated>2018-06-24T08:00:16.692Z</updated>
     
-    <content type="html"><![CDATA[<font color="orange">P.S. <strong>实验</strong>发老师邮箱：<a href="mailto:`136218782@qq.com" target="_blank" rel="noopener">`136218782@qq.com</a>` 试卷有A、B卷，A卷为多选、B卷为单选。<a id="more"></a><br><br>PPT下载（满速）：<a href="http://patg8wqzq.bkt.clouddn.com/hive.7z" target="_blank" rel="noopener">七牛云</a><br></font><h2 id="A卷（多选）"><a href="#A卷（多选）" class="headerlink" title="A卷（多选）"></a>A卷（多选）</h2><h3 id="选择题"><a href="#选择题" class="headerlink" title="选择题"></a>选择题</h3><ol><li><p>Hive底层存储<br>借助于<code>HDFS</code>（分布式文件系统）</p></li><li><p>Hive不能单独运行，借助<code>HDFS</code>和<code>MapReduce</code> （<code>Hadoop</code>的核心组件）</p></li><li><p>Hive删除数据操作命令</p></li><li><p>MySQL语句里面需要进行MapReduce操作有哪些 （PPT）</p></li><li><p>Hive历史，产生于<code>Facebook</code>公司，为什么出现？<br>比如关系数据卷出现瓶颈，传统数据库供不应求等等</p></li><li><p>join的说法，支持多表 …… （<strong>某一页PPT</strong>）</p></li><li><p>join的连接方式</p></li><li><p>编写自定义函数需要继承什么类？</p></li><li><p>Hive可以与哪些组件对接？调用API接口<br><code>Spark、HDFS、Hbase、MapReduce等</code></p></li><li><p>Hive集合数据类型有哪些？</p></li><li><p>右外连接，返回什么记录？left, right or all？</p><h3 id="判断题"><a href="#判断题" class="headerlink" title="判断题"></a>判断题</h3></li><li><p>Hive删除一个外部表时，删除的只是连接，而非数据</p></li><li><p>加载数据<code>load data</code>时使用<code>local</code>表示什么意思</p></li><li><p><code>UDF</code>打完<code>jar</code>包后，添加到Hive的语句是什么</p></li><li><p><code>day</code>函数的执行结果 –获取</p></li></ol><h3 id="简答题"><a href="#简答题" class="headerlink" title="简答题"></a>简答题</h3><ol><li><p>Hive与Hbase的区别联系？</p></li><li><p>Hive分区的优势</p></li><li><p><code>left / right join</code> 的结果？</p></li><li><p><strong>一个未知的上机练习</strong>，两个自定义函数（一个转周、转星期几）</p></li><li><p>描述创建自定义函数的过程</p></li><li><p>Hive特点，然后与<code>RDBMS</code>（传统数据库）的区别与共性</p></li><li><p>Hive中<code>sort by</code> 和 <code>order by</code>代表什么？</p></li></ol><h2 id="B卷（单选）"><a href="#B卷（单选）" class="headerlink" title="B卷（单选）"></a>B卷（单选）</h2><p><strong>单选，题目和A卷类似</strong><br><strong>以上</strong></p>]]></content>
+    <content type="html"><![CDATA[<font color="#3366ff"><strong>P.S. 实验发老师邮箱: <a href="mailto:136218782@qq.com" target="_blank" rel="noopener">136218782@qq.com</a>，试卷有A、B卷，A卷为多选、B卷为单选。<a id="more"></a><br>PPT下载（满速）：<a href="http://patg8wqzq.bkt.clouddn.com/hive.7z" target="_blank" rel="noopener">七牛云</a></strong></font><h2 id="A卷（多选）"><a href="#A卷（多选）" class="headerlink" title="A卷（多选）"></a>A卷（多选）</h2><h3 id="选择题"><a href="#选择题" class="headerlink" title="选择题"></a>选择题</h3><ol><li><p>Hive底层存储<br>借助于<code>HDFS</code>（分布式文件系统）</p></li><li><p>Hive不能单独运行，借助<code>HDFS</code>和<code>MapReduce</code> （<code>Hadoop</code>的核心组件）</p></li><li><p>Hive删除数据操作命令</p></li><li><p>MySQL语句里面需要进行MapReduce操作有哪些 （PPT）</p></li><li><p>Hive历史，产生于<code>Facebook</code>公司，为什么出现？<br>比如关系数据卷出现瓶颈，传统数据库供不应求等等</p></li><li><p>join的说法，支持多表 …… （<strong>某一页PPT</strong>）</p></li><li><p>join的连接方式</p></li><li><p>编写自定义函数需要继承什么类？</p></li><li><p>Hive可以与哪些组件对接？调用API接口<br><code>Spark、HDFS、Hbase、MapReduce等</code></p></li><li><p>Hive集合数据类型有哪些？</p></li><li><p>右外连接，返回什么记录？left, right or all？</p></li></ol><h3 id="判断题"><a href="#判断题" class="headerlink" title="判断题"></a>判断题</h3><ol><li><p>Hive删除一个外部表时，删除的只是连接，而非数据</p></li><li><p>加载数据<code>load data</code>时使用<code>local</code>表示什么意思</p></li><li><p><code>UDF</code>打完<code>jar</code>包后，添加到Hive的语句是什么</p></li><li><p><code>day</code>函数的执行结果 –获取</p></li></ol><h3 id="简答题"><a href="#简答题" class="headerlink" title="简答题"></a>简答题</h3><ol><li><p>Hive与Hbase的区别联系？</p></li><li><p>Hive分区的优势</p></li><li><p><code>left / right join</code> 的结果？</p></li><li><p><strong>一个未知的上机练习</strong>，两个自定义函数（一个转周、转星期几）</p></li><li><p>描述创建自定义函数的过程</p></li><li><p>Hive特点，然后与<code>RDBMS</code>（传统数据库）的区别与共性</p></li><li><p>Hive中<code>sort by</code> 和 <code>order by</code>代表什么？</p></li></ol><h2 id="B卷（单选）"><a href="#B卷（单选）" class="headerlink" title="B卷（单选）"></a>B卷（单选）</h2><p>单选，题目和A卷类似，以上。</p>]]></content>
     
     <summary type="html">
     
-      &lt;font color=&quot;orange&quot;&gt;P.S. &lt;strong&gt;实验&lt;/strong&gt;发老师邮箱：&lt;a href=&quot;mailto:`136218782@qq.com&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;`136218782@qq.com&lt;/a&gt;` 试卷有A、B卷，A卷为多选、B卷为单选。
+      &lt;font color=&quot;#3366ff&quot;&gt;&lt;strong&gt;P.S. 实验发老师邮箱: &lt;a href=&quot;mailto:136218782@qq.com&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;136218782@qq.com&lt;/a&gt;，试卷有A、B卷，A卷为多选、B卷为单选。
     
     </summary>
     
-      <category term="期末重点" scheme="https://ithou.cc/categories/%E6%9C%9F%E6%9C%AB%E9%87%8D%E7%82%B9/"/>
+      <category term="期末" scheme="https://ithou.cc/categories/%E6%9C%9F%E6%9C%AB/"/>
     
     
       <category term="Hive" scheme="https://ithou.cc/tags/Hive/"/>
@@ -201,6 +201,32 @@
   </entry>
   
   <entry>
+    <title>写给小欣 &amp; 小容</title>
+    <link href="https://ithou.cc/archives/4e1c805f.html"/>
+    <id>https://ithou.cc/archives/4e1c805f.html</id>
+    <published>2018-06-08T09:34:57.000Z</published>
+    <updated>2018-06-08T17:09:58.622Z</updated>
+    
+    <content type="html"><![CDATA[<p>我两个亲爱的，今年才毕业的朋友。<a id="more"></a></p><h2 id="给小欣-amp-小容"><a href="#给小欣-amp-小容" class="headerlink" title="给小欣 &amp; 小容"></a>给小欣 &amp; 小容</h2><p>首先真的很想祝贺你们！终于坚持到了6月8号下午5点，这是一个战士收刀入鞘骄傲般的时刻。三年有期徒刑，已刑满释放。高考和平常没什么不一样，仅仅是因为多了些形式和过程，才让人们更加关注而已。回首三年来，不论英雄，不论成败。考得好，可能运气稍好些。逊色一点，不过是塞翁失马，焉知非福。高考它终究是一个“坎”。三年如一日，终于可以告一段落，这也是和过去一切释然的时刻。</p><p>那时我们有梦，关于文学，关于爱情，关于穿越世界的旅行。如今，我们深夜饮酒，杯子碰到一起，都是梦破碎的声音。我常常想象北岛说这句话的神情和动作，是否真的端着酒杯，如此深情？</p><p>不管怎样，累了三年，今晚可以睡个好觉了。</p><p>小容同学，<strong>又</strong>累了一年，真的很心疼你，虽然好几次去二中找小欣，打听了复读班在五楼，可惜最后都没能看望到你，成为遗憾，但是没关系，以后还会有很多机会。你说你经常去医院、经常不顺心、还休假回家复习，经常…… 这些我都知道，常常让人感到泪目，比我当初还惨，不在二中也不知道怎么安慰你，但今天还是结束了，一切终将归于平静。复读生是伟大的，郝容你更是一个勇士。相信这一年，你成长的速远远大于你成绩的增长速度。</p><p>最后我想说的是：<strong>复读，对你和我来说都是一场人生修行，我愿意用“人生”这个词</strong>。</p><h2 id="此后…"><a href="#此后…" class="headerlink" title="此后…"></a>此后…</h2><p>你们是我最后认识的两个高中生，此后没有了。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;我两个亲爱的，今年才毕业的朋友。
+    
+    </summary>
+    
+      <category term="关于高考" scheme="https://ithou.cc/categories/%E5%85%B3%E4%BA%8E%E9%AB%98%E8%80%83/"/>
+    
+    
+      <category term="高考" scheme="https://ithou.cc/tags/%E9%AB%98%E8%80%83/"/>
+    
+      <category term="随笔" scheme="https://ithou.cc/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+      <category term="感悟" scheme="https://ithou.cc/tags/%E6%84%9F%E6%82%9F/"/>
+    
+  </entry>
+  
+  <entry>
     <title>高考是一场修行</title>
     <link href="https://ithou.cc/archives/6659c8ee.html"/>
     <id>https://ithou.cc/archives/6659c8ee.html</id>
@@ -217,32 +243,6 @@
 &lt;/blockquote&gt;
 &lt;p&gt;我想，读者也同样如此。&lt;/p&gt;
 &lt;p&gt;关于高考，每年都会写（2014年开始），但那时没什么真实的体验。真正心有所触动的是从2015年开始的——我的第一次高考……&lt;br&gt;
-    
-    </summary>
-    
-      <category term="关于高考" scheme="https://ithou.cc/categories/%E5%85%B3%E4%BA%8E%E9%AB%98%E8%80%83/"/>
-    
-    
-      <category term="高考" scheme="https://ithou.cc/tags/%E9%AB%98%E8%80%83/"/>
-    
-      <category term="随笔" scheme="https://ithou.cc/tags/%E9%9A%8F%E7%AC%94/"/>
-    
-      <category term="感悟" scheme="https://ithou.cc/tags/%E6%84%9F%E6%82%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>写给小欣 &amp; 小容</title>
-    <link href="https://ithou.cc/archives/4e1c805f.html"/>
-    <id>https://ithou.cc/archives/4e1c805f.html</id>
-    <published>2018-06-08T09:34:57.000Z</published>
-    <updated>2018-06-08T17:09:58.622Z</updated>
-    
-    <content type="html"><![CDATA[<p>我两个亲爱的，今年才毕业的朋友。<a id="more"></a></p><h2 id="给小欣-amp-小容"><a href="#给小欣-amp-小容" class="headerlink" title="给小欣 &amp; 小容"></a>给小欣 &amp; 小容</h2><p>首先真的很想祝贺你们！终于坚持到了6月8号下午5点，这是一个战士收刀入鞘骄傲般的时刻。三年有期徒刑，已刑满释放。高考和平常没什么不一样，仅仅是因为多了些形式和过程，才让人们更加关注而已。回首三年来，不论英雄，不论成败。考得好，可能运气稍好些。逊色一点，不过是塞翁失马，焉知非福。高考它终究是一个“坎”。三年如一日，终于可以告一段落，这也是和过去一切释然的时刻。</p><p>那时我们有梦，关于文学，关于爱情，关于穿越世界的旅行。如今，我们深夜饮酒，杯子碰到一起，都是梦破碎的声音。我常常想象北岛说这句话的神情和动作，是否真的端着酒杯，如此深情？</p><p>不管怎样，累了三年，今晚可以睡个好觉了。</p><p>小容同学，<strong>又</strong>累了一年，真的很心疼你，虽然好几次去二中找小欣，打听了复读班在五楼，可惜最后都没能看望到你，成为遗憾，但是没关系，以后还会有很多机会。你说你经常去医院、经常不顺心、还休假回家复习，经常…… 这些我都知道，常常让人感到泪目，比我当初还惨，不在二中也不知道怎么安慰你，但今天还是结束了，一切终将归于平静。复读生是伟大的，郝容你更是一个勇士。相信这一年，你成长的速远远大于你成绩的增长速度。</p><p>最后我想说的是：<strong>复读，对你和我来说都是一场人生修行，我愿意用“人生”这个词</strong>。</p><h2 id="此后…"><a href="#此后…" class="headerlink" title="此后…"></a>此后…</h2><p>你们是我最后认识的两个高中生，此后没有了。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;我两个亲爱的，今年才毕业的朋友。
     
     </summary>
     
