@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ithou.cc/"/>
-  <updated>2018-06-24T15:44:17.066Z</updated>
+  <updated>2018-06-25T05:11:43.218Z</updated>
   <id>https://ithou.cc/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Web测试</title>
+    <link href="https://ithou.cc/archives/5871c336.html"/>
+    <id>https://ithou.cc/archives/5871c336.html</id>
+    <published>2018-06-25T05:06:48.207Z</published>
+    <updated>2018-06-25T05:11:43.218Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>总结</strong></p><a id="more"></a><ul><li>状态码</li><li>HTML常用标签</li><li>并发用户数<br>指的是<code>session会话</code>数目</li><li>HTTP: 无连接协议，FTP: 有连接</li><li>链接测试工具：Xenu，测试<strong>死链接</strong></li><li>textbox - 用户名</li><li>text area - 个性签名等</li><li>Web以HTML与HTTP(S)协议为基基础</li><li>性能测试目的：为了获得性能指标</li><li>名词解释<br>点击率(Hits)：客户端每秒向服务器提交HTTP数据包数量<br>Working Set: 工作集。虚拟地址空间，在物理内存中的一部分。<br>session: 会话。用户浏览网站到关闭网站的时间段。</li><li>url语法格式</li><li>html文档结构</li><li>性能测试内容<br>响应、速度、压力、负载测试</li><li>链接测试内容<br>检查链接的页面是否存在，是否有孤立的页面</li><li>password测试<br>输入数据是否隐藏</li><li>滚动条测试<br>（图,书上）拖动滚动条看是否刷新，快速拖看是否闪屏</li><li>session测试<br>超时</li><li>指标 （6个）<br>时间、吞吐、请求、hits …</li><li>应该有的功能<br>生成脚本-产生压力-实时监控-分析</li><li>简答题<br>csdn登录页面（书上）<strong>功能测试用例</strong><br>名字、类型、</li><li>简答题<br>lx..blog<br>loadrunner做性能测试（几句话）<br>制定方案，创建虚拟用户，设计测试场景（注册、登录），执行场景，分析执行结果。</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;总结&lt;/strong&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="期末" scheme="https://ithou.cc/categories/%E6%9C%9F%E6%9C%AB/"/>
+    
+    
+      <category term="Web测试" scheme="https://ithou.cc/tags/Web%E6%B5%8B%E8%AF%95/"/>
+    
+  </entry>
   
   <entry>
     <title>Hive重点</title>
