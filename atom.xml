@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ithou.cc/"/>
-  <updated>2018-06-25T05:11:43.218Z</updated>
+  <updated>2018-07-19T15:00:36.479Z</updated>
   <id>https://ithou.cc/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>GitHub Pages搭建博客之路（二）——环境搭建</title>
+    <link href="https://ithou.cc/archives/22e23869.html"/>
+    <id>https://ithou.cc/archives/22e23869.html</id>
+    <published>2018-07-19T14:40:00.000Z</published>
+    <updated>2018-07-19T15:00:36.479Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="安装Git和Node-js（Windows版）"><a href="#安装Git和Node-js（Windows版）" class="headerlink" title="安装Git和Node.js（Windows版）"></a>安装Git和Node.js（Windows版）</h2><a id="more"></a><h3 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h3><p>下载：<a href="https://git-scm.com/download/win" target="_blank" rel="noopener">https://git-scm.com/download/win</a> </p><p><img src="https://images-1252723380.cos.ap-chengdu.myqcloud.com/Hexo%E6%90%AD%E5%BB%BA/git%E4%B8%8B%E8%BD%BD-min.png" alt="enter description here"></p><p>选择32 / 64位，下载后双击安装，然后啥都别管，一路<code>Next</code>走到黑！</p><p><img src="https://images-1252723380.cos.ap-chengdu.myqcloud.com/Hexo%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85git-min.png" alt="enter description here"></p><p>完事之后…… <code>任意目录鼠标右键</code>→<code>Git Bash Here</code>→<code>git --version</code> 会看到<strong>Git版本信息</strong>。</p><p><img src="https://images-1252723380.cos.ap-chengdu.myqcloud.com/Hexo%E6%90%AD%E5%BB%BA/git-bash-here-min.png" alt="enter description here"></p><p><img src="https://images-1252723380.cos.ap-chengdu.myqcloud.com/Hexo%E6%90%AD%E5%BB%BA/gitversion-min.png" alt="enter description here"></p><h3 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h3><p>下载链接：<a href="https://nodejs.org/en/" target="_blank" rel="noopener">https://nodejs.org/en/</a> </p><p>安装同上，一路<code>NEXT</code>。</p><p><img src="https://images-1252723380.cos.ap-chengdu.myqcloud.com/Hexo%E6%90%AD%E5%BB%BA/node-min.png" alt="enter description here"></p><p><b><font color="orange"><em>P.s 挂代理加速下载</em></font></b></p><h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>在<code>D盘</code>（其他盘也可以）创建文件夹<code>F:/Hexo</code>右键鼠标，点击<code>Git Bash Here</code>，输入以下命令安装：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g </span><br><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure><p><img src="https://images-1252723380.cos.ap-chengdu.myqcloud.com/Hexo%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85hexo-min.png" alt="enter description here"></p><p><img src="https://images-1252723380.cos.ap-chengdu.myqcloud.com/Hexo%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85hexo2-min.png" alt="enter description here"></p><h2 id="配置ssh密钥"><a href="#配置ssh密钥" class="headerlink" title="配置ssh密钥"></a>配置ssh密钥</h2><p>SSH密钥可以让本地git项目与远程的Github建立联系。<br>密钥文件保存目录：<code>C:\Users\xxx\ .ssh</code> </p><p><strong>创建密钥</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;xx@xx.xx&quot;  # 替换成自己的邮箱</span><br></pre></td></tr></table></figure></p><p><img src="https://images-1252723380.cos.ap-chengdu.myqcloud.com/Hexo%E6%90%AD%E5%BB%BA/%E9%85%8D%E7%BD%AEssh-min.png" alt="enter description here"></p><p>复制密钥到剪切板（也可以进入<code>C:\Users\xxx\ .ssh\id_rsa.pub</code>文件复制）</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">clip &lt; ~/.ssh/id_rsa.pub  # 此时密钥已经通过命令复制好了</span><br></pre></td></tr></table></figure><p>登录 <a href="https://github.com" target="_blank" rel="noopener"><strong>GitHub</strong></a></p><p><img src="https://images-1252723380.cos.ap-chengdu.myqcloud.com/Hexo%E6%90%AD%E5%BB%BA/%E9%85%8D%E7%BD%AEssh-2-min.png" alt="enter description here"></p><p><img src="https://images-1252723380.cos.ap-chengdu.myqcloud.com/Hexo%E6%90%AD%E5%BB%BA/%E9%85%8D%E7%BD%AEssh-3-min.png" alt="enter description here"></p><p><img src="https://images-1252723380.cos.ap-chengdu.myqcloud.com/Hexo%E6%90%AD%E5%BB%BA/%E9%85%8D%E7%BD%AEssh-4-min.png" alt="enter description here"></p><p><img src="https://images-1252723380.cos.ap-chengdu.myqcloud.com/Hexo%E6%90%AD%E5%BB%BA/%E9%85%8D%E7%BD%AEssh-5-min.png" alt="enter description here"> </p><h2 id="初始化Hexo"><a href="#初始化Hexo" class="headerlink" title="初始化Hexo"></a>初始化Hexo</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure><p><img src="https://images-1252723380.cos.ap-chengdu.myqcloud.com/Hexo%E6%90%AD%E5%BB%BA/%E5%88%9D%E5%A7%8B%E5%8C%96hexo-min.png" alt="enter description here"></p><p><strong>浏览器打开 <code>http://localhost:4000</code></strong></p><p><img src="https://images-1252723380.cos.ap-chengdu.myqcloud.com/Hexo%E6%90%AD%E5%BB%BA/hexo-s-min.png" alt="enter description here"></p><h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>至此，博客搭建已经成功了一大半了！剩下的还有本地实时同步到<strong>GitHub Pages</strong>，优化界面等等。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;安装Git和Node-js（Windows版）&quot;&gt;&lt;a href=&quot;#安装Git和Node-js（Windows版）&quot; class=&quot;headerlink&quot; title=&quot;安装Git和Node.js（Windows版）&quot;&gt;&lt;/a&gt;安装Git和Node.js（Windows版）&lt;/h2&gt;
+    
+    </summary>
+    
+    
+      <category term="博客搭建" scheme="https://ithou.cc/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+      <category term="github pages" scheme="https://ithou.cc/tags/github-pages/"/>
+    
+  </entry>
   
   <entry>
     <title>Web测试</title>
