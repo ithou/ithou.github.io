@@ -40,6 +40,26 @@
   </entry>
   
   <entry>
+    <title>Windows不常用命令</title>
+    <link href="https://ithou.cc/archives/e034061.html"/>
+    <id>https://ithou.cc/archives/e034061.html</id>
+    <published>2018-07-28T02:30:07.482Z</published>
+    <updated>2018-09-05T03:31:25.107Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="从命令行进入桌面"><a href="#从命令行进入桌面" class="headerlink" title="从命令行进入桌面"></a>从命令行进入桌面</h2><p><code>cd %userprofile%\desktop</code> 命令行下任意目录进入桌面（win7 &amp; win10)</p><a id="more"></a><h2 id="恢复U盘容量"><a href="#恢复U盘容量" class="headerlink" title="恢复U盘容量"></a>恢复U盘容量</h2><p>制作<strong>U盘启动盘</strong>之后，显示的容量会减少，可以在命令行下用以下命令来恢复：</p><ol><li><code>diskpart</code> 进入磁盘管理</li><li><code>list disk</code> 列出磁盘</li><li>确定好<strong>U盘序列</strong>（指上面的数字0,1, …）</li><li><code>select disk X</code> （<code>X</code>代表U盘序号）</li><li>执行<code>clean</code> </li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;从命令行进入桌面&quot;&gt;&lt;a href=&quot;#从命令行进入桌面&quot; class=&quot;headerlink&quot; title=&quot;从命令行进入桌面&quot;&gt;&lt;/a&gt;从命令行进入桌面&lt;/h2&gt;&lt;p&gt;&lt;code&gt;cd %userprofile%\desktop&lt;/code&gt; 命令行下任意目录进入桌面（win7 &amp;amp; win10)&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Code" scheme="https://ithou.cc/tags/Code/"/>
+    
+  </entry>
+  
+  <entry>
     <title>GitHub Pages搭建博客之路（二）——环境搭建</title>
     <link href="https://ithou.cc/archives/22e23869.html"/>
     <id>https://ithou.cc/archives/22e23869.html</id>
@@ -58,6 +78,27 @@
       <category term="博客搭建" scheme="https://ithou.cc/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
     
       <category term="github pages" scheme="https://ithou.cc/tags/github-pages/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Window终止进程の方法</title>
+    <link href="https://ithou.cc/archives/7a998ac7.html"/>
+    <id>https://ithou.cc/archives/7a998ac7.html</id>
+    <published>2018-06-25T13:38:12.000Z</published>
+    <updated>2018-09-05T03:31:17.191Z</updated>
+    
+    <content type="html"><![CDATA[<p><code>Windows</code>下终止<code>MySQL</code>进程的方法：</p><p>管理员身份运行<code>cmd</code> → <code>netstat -ano | findstr 3306</code><br><a id="more"></a><br>然后记录下<code>PID值</code>，<br>终止进程→ <code>taskkill /F /PID [PID值]</code></p><p><img src="https://images-1252723380.cos.ap-chengdu.myqcloud.com/taskkill-1.png" alt="enter description here"></p><p><img src="https://images-1252723380.cos.ap-chengdu.myqcloud.com/taskkill-2.png" alt="enter description here"></p><p><img src="https://images-1252723380.cos.ap-chengdu.myqcloud.com/taskkill-3.png" alt="enter description here"></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;code&gt;Windows&lt;/code&gt;下终止&lt;code&gt;MySQL&lt;/code&gt;进程的方法：&lt;/p&gt;
+&lt;p&gt;管理员身份运行&lt;code&gt;cmd&lt;/code&gt; → &lt;code&gt;netstat -ano | findstr 3306&lt;/code&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Code" scheme="https://ithou.cc/categories/Code/"/>
+    
     
   </entry>
   
@@ -290,6 +331,32 @@
   </entry>
   
   <entry>
+    <title>写给小欣 &amp; 小容</title>
+    <link href="https://ithou.cc/archives/4e1c805f.html"/>
+    <id>https://ithou.cc/archives/4e1c805f.html</id>
+    <published>2018-06-08T09:34:57.000Z</published>
+    <updated>2018-06-08T17:09:58.622Z</updated>
+    
+    <content type="html"><![CDATA[<p>我两个亲爱的，今年才毕业的朋友。<a id="more"></a></p><h2 id="给小欣-amp-小容"><a href="#给小欣-amp-小容" class="headerlink" title="给小欣 &amp; 小容"></a>给小欣 &amp; 小容</h2><p>首先真的很想祝贺你们！终于坚持到了6月8号下午5点，这是一个战士收刀入鞘骄傲般的时刻。三年有期徒刑，已刑满释放。高考和平常没什么不一样，仅仅是因为多了些形式和过程，才让人们更加关注而已。回首三年来，不论英雄，不论成败。考得好，可能运气稍好些。逊色一点，不过是塞翁失马，焉知非福。高考它终究是一个“坎”。三年如一日，终于可以告一段落，这也是和过去一切释然的时刻。</p><p>那时我们有梦，关于文学，关于爱情，关于穿越世界的旅行。如今，我们深夜饮酒，杯子碰到一起，都是梦破碎的声音。我常常想象北岛说这句话的神情和动作，是否真的端着酒杯，如此深情？</p><p>不管怎样，累了三年，今晚可以睡个好觉了。</p><p>小容同学，<strong>又</strong>累了一年，真的很心疼你，虽然好几次去二中找小欣，打听了复读班在五楼，可惜最后都没能看望到你，成为遗憾，但是没关系，以后还会有很多机会。你说你经常去医院、经常不顺心、还休假回家复习，经常…… 这些我都知道，常常让人感到泪目，比我当初还惨，不在二中也不知道怎么安慰你，但今天还是结束了，一切终将归于平静。复读生是伟大的，郝容你更是一个勇士。相信这一年，你成长的速远远大于你成绩的增长速度。</p><p>最后我想说的是：<strong>复读，对你和我来说都是一场人生修行，我愿意用“人生”这个词</strong>。</p><h2 id="此后…"><a href="#此后…" class="headerlink" title="此后…"></a>此后…</h2><p>你们是我最后认识的两个高中生，此后没有了。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;我两个亲爱的，今年才毕业的朋友。
+    
+    </summary>
+    
+      <category term="关于高考" scheme="https://ithou.cc/categories/%E5%85%B3%E4%BA%8E%E9%AB%98%E8%80%83/"/>
+    
+    
+      <category term="高考" scheme="https://ithou.cc/tags/%E9%AB%98%E8%80%83/"/>
+    
+      <category term="随笔" scheme="https://ithou.cc/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+      <category term="感悟" scheme="https://ithou.cc/tags/%E6%84%9F%E6%82%9F/"/>
+    
+  </entry>
+  
+  <entry>
     <title>高考是一场修行</title>
     <link href="https://ithou.cc/archives/6659c8ee.html"/>
     <id>https://ithou.cc/archives/6659c8ee.html</id>
@@ -306,32 +373,6 @@
 &lt;/blockquote&gt;
 &lt;p&gt;我想，读者也同样如此。&lt;/p&gt;
 &lt;p&gt;关于高考，每年都会写（2014年开始），但那时没什么真实的体验。真正心有所触动的是从2015年开始的——我的第一次高考……&lt;br&gt;
-    
-    </summary>
-    
-      <category term="关于高考" scheme="https://ithou.cc/categories/%E5%85%B3%E4%BA%8E%E9%AB%98%E8%80%83/"/>
-    
-    
-      <category term="高考" scheme="https://ithou.cc/tags/%E9%AB%98%E8%80%83/"/>
-    
-      <category term="随笔" scheme="https://ithou.cc/tags/%E9%9A%8F%E7%AC%94/"/>
-    
-      <category term="感悟" scheme="https://ithou.cc/tags/%E6%84%9F%E6%82%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>写给小欣 &amp; 小容</title>
-    <link href="https://ithou.cc/archives/4e1c805f.html"/>
-    <id>https://ithou.cc/archives/4e1c805f.html</id>
-    <published>2018-06-08T09:34:57.000Z</published>
-    <updated>2018-06-08T17:09:58.622Z</updated>
-    
-    <content type="html"><![CDATA[<p>我两个亲爱的，今年才毕业的朋友。<a id="more"></a></p><h2 id="给小欣-amp-小容"><a href="#给小欣-amp-小容" class="headerlink" title="给小欣 &amp; 小容"></a>给小欣 &amp; 小容</h2><p>首先真的很想祝贺你们！终于坚持到了6月8号下午5点，这是一个战士收刀入鞘骄傲般的时刻。三年有期徒刑，已刑满释放。高考和平常没什么不一样，仅仅是因为多了些形式和过程，才让人们更加关注而已。回首三年来，不论英雄，不论成败。考得好，可能运气稍好些。逊色一点，不过是塞翁失马，焉知非福。高考它终究是一个“坎”。三年如一日，终于可以告一段落，这也是和过去一切释然的时刻。</p><p>那时我们有梦，关于文学，关于爱情，关于穿越世界的旅行。如今，我们深夜饮酒，杯子碰到一起，都是梦破碎的声音。我常常想象北岛说这句话的神情和动作，是否真的端着酒杯，如此深情？</p><p>不管怎样，累了三年，今晚可以睡个好觉了。</p><p>小容同学，<strong>又</strong>累了一年，真的很心疼你，虽然好几次去二中找小欣，打听了复读班在五楼，可惜最后都没能看望到你，成为遗憾，但是没关系，以后还会有很多机会。你说你经常去医院、经常不顺心、还休假回家复习，经常…… 这些我都知道，常常让人感到泪目，比我当初还惨，不在二中也不知道怎么安慰你，但今天还是结束了，一切终将归于平静。复读生是伟大的，郝容你更是一个勇士。相信这一年，你成长的速远远大于你成绩的增长速度。</p><p>最后我想说的是：<strong>复读，对你和我来说都是一场人生修行，我愿意用“人生”这个词</strong>。</p><h2 id="此后…"><a href="#此后…" class="headerlink" title="此后…"></a>此后…</h2><p>你们是我最后认识的两个高中生，此后没有了。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;我两个亲爱的，今年才毕业的朋友。
     
     </summary>
     
@@ -429,60 +470,6 @@
     
       <category term="英语" scheme="https://ithou.cc/categories/%E8%8B%B1%E8%AF%AD/"/>
     
-    
-  </entry>
-  
-  <entry>
-    <title>Lesson 3 Please send me a card</title>
-    <link href="https://ithou.cc/archives/bbf71de9.html"/>
-    <id>https://ithou.cc/archives/bbf71de9.html</id>
-    <published>2018-05-17T07:53:06.000Z</published>
-    <updated>2018-06-08T17:13:02.192Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="单词"><a href="#单词" class="headerlink" title="单词"></a>单词</h2><ul><li><strong>send</strong> <em>v</em>.寄，送<br>send sb. sth. = send sth. to sb.<blockquote><p>take. 某人亲自寄送<br>send. 通过第三个人去送</p></blockquote></li></ul><a id="more"></a><ul><li><p><strong>postcard</strong> <em>n.</em> 明信片<br>namecard. 名片</p><blockquote><p><strong>Here</strong> is my namecard. 不说 <del>this is</del> </p></blockquote></li><li><p><strong>ID card</strong> 身份证<br>credit card. 信用卡</p></li><li><p><strong>spoil</strong> <code>/spɔɪl/</code> <em>v.</em> 使索然无味，毁了；<strong>溺爱，宠爱</strong></p><blockquote><p>break. 打破<br><code>spoil</code> 把东西质量变得不好，多指生活中不顺心的事，多跟心情有关。<br><code>eg.</code>His parents spoiled the boy.</p><p>damage. 破坏，程度不一定很严重<br>destroy. 破坏，<strong>彻底</strong>毁坏</p></blockquote></li><li><p><strong>museum</strong> <em>n.</em> 博物馆<br>Palce Musemu. 故宫博物院</p></li><li><p><strong>public</strong> <em>adj.</em> 公共的<br><code>反义词</code> private. 私人的，</p><blockquote><p>public school / place. 公立学校 / 公共场所<br>public house(pub). <code>酒吧</code><br>in private. 私下<br>in public. 公开</p></blockquote></li><li><p><strong>friendly</strong> <em>adj.</em> 友好的<br>注意这是一个 <strong><code>形容词</code></strong></p><blockquote><p>lovely. 可爱的</p></blockquote></li><li><p><strong>waiter</strong> <em>n.</em> 服务员（男）</p><blockquote><p>waitress. n.女服务员<br>chief waiter. 领班</p><blockquote><p>I want to see the <code>chief waiter</code>.</p></blockquote></blockquote></li><li><p><strong>lend</strong> <em>v.</em> 借给<br>lend sb. sth. = lend sth. to sb.<br><code>p.s.</code> 注意这里 sb. 是 <strong>间接宾语</strong> ，sth. 是 <strong>直接宾语</strong> </p></li><li><p><strong>whole</strong> <em>adj.</em> 整个的<br><code>I spent the whole day in my room</code> </p><blockquote><p>the whole day. = all the day = all day.  一整天</p></blockquote></li><li><p><strong>single</strong> <code>/ˈsɪŋ.ɡəl/</code> <em>adj.</em> 单一的</p></li></ul><h2 id="课文"><a href="#课文" class="headerlink" title="课文"></a>课文</h2><ol><li><p><strong><code>Last summer, I went to Italy.</code></strong><br><code>last</code> 前不加the表示<code>上一个</code>, 加the表示 <code>最后一个</code> ，</p></li><li><p><strong><code>He tought me a few words of Italian</code></strong><br>a few words = a little. 几句话</p></li><li><p><strong><code>think about</code></strong>  想到，思考</p><blockquote><p>think about = think of.</p></blockquote></li><li><p><strong><code>My holidays passed quikly.</code></strong><br><code>passed</code> 表示过得很快</p></li><li><p><strong><code>On the last day I made a big decision.</code></strong> 到了最后一天我做出了一项重大的决定。<br><code>last</code> + the表示<strong>最后</strong>的意思。不加the表示上一个。</p><blockquote><p><strong>Last week</strong> I went to the theatre. <strong>上个星期</strong> 我去看了戏。</p></blockquote></li><li><p><strong><code>I spent the whole day in my room, but I did not write a single card !</code></strong> 我在房间里关了一整天，然后竟连一张明信片也没有写成。<br>spend + <code>时间</code> + <code>地点</code> </p></li><li><p><strong>双宾语</strong><br><strong><code>send me a card.</code></strong> me是<strong>间接宾语</strong>，a card 是<strong>直接宾语</strong> </p></li><li><p><strong><code>to</code></strong> &amp; <strong><code>for</code></strong></p><ul><li>在汉语翻译为<strong>给</strong>，<strong>为</strong>，<strong>替</strong>时用<code>for</code></li><li>只翻译为<strong>给</strong>，没有<strong>替</strong>的意思用<code>to</code><blockquote><p>for： find，buy，make，do … favor … ，order</p></blockquote></li></ul></li></ol><h2 id="课后练习"><a href="#课后练习" class="headerlink" title="课后练习"></a>课后练习</h2><ul><li><p><strong>in a friendly way</strong><br>friendly. <em><code>adj.</code></em> 形容词作定语<br>in a … way. 以 … 的方式</p></li><li><p><strong>the whole day. = all the day. = all day</strong><br>all of + <code>代词</code>. 代词前面不需要任何修饰词</p><blockquote><p>all of them. all of us.<br>all of the + <code>名词</code>.  all of 接名词时一定要加冠词the<br>all of the friends. </p></blockquote></li><li><p><strong>latest</strong> 最新的.<br>latest news. 刚出炉的新闻<br>latest stlye. 最新款式</p></li><li><p><strong>make up one’s mind</strong> 下定决心<br>change one’s mind. 改变…的主意<br>made a wish. 许下一个愿望.</p><blockquote><p>He made a big decision. He made up his mind. </p></blockquote></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;单词&quot;&gt;&lt;a href=&quot;#单词&quot; class=&quot;headerlink&quot; title=&quot;单词&quot;&gt;&lt;/a&gt;单词&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;send&lt;/strong&gt; &lt;em&gt;v&lt;/em&gt;.寄，送&lt;br&gt;send sb. sth. = send sth. to sb.&lt;blockquote&gt;
-&lt;p&gt;take. 某人亲自寄送&lt;br&gt;send. 通过第三个人去送&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-      <category term="英语" scheme="https://ithou.cc/categories/%E8%8B%B1%E8%AF%AD/"/>
-    
-    
-      <category term="新概念英语2" scheme="https://ithou.cc/tags/%E6%96%B0%E6%A6%82%E5%BF%B5%E8%8B%B1%E8%AF%AD2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Lesson 2 Breakfast or lunch ?</title>
-    <link href="https://ithou.cc/archives/3bff1571.html"/>
-    <id>https://ithou.cc/archives/3bff1571.html</id>
-    <published>2018-05-13T01:44:08.000Z</published>
-    <updated>2018-06-08T17:12:44.136Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="单词"><a href="#单词" class="headerlink" title="单词"></a>单词</h2><ul><li><strong>until</strong> <em>prep.</em> 直到<br>后面加 <strong><code>时间状语</code></strong> 从句，前面是主句。<br>until可以看成是一个<strong>终止线</strong>。<blockquote><p>I stay in bed until lunchtime.</p></blockquote></li></ul><a id="more"></a><ul><li><strong>outside</strong> <em>adv.</em> 在外面</li><li><strong>ring</strong> (rang, rung) [刺耳的、提醒性的]响声，铃、电话等<br>v. 打电话（=<code>call</code>） ring + sb. <code>I will ring you.</code><br>n. 戒指.  《The Lord of the Ringss》指环王<blockquote><p>give sb a ring. 表示给某人戒指或者打电话. 具体看故事背景. </p><p>jingle. [普通的]响铃铛</p></blockquote></li></ul><h2 id="课文"><a href="#课文" class="headerlink" title="课文"></a>课文</h2><ul><li><strong>on sundays</strong>  加<code>s</code>代表每个星期天，每逢星期天</li><li><strong>What a day! 多么糟糕的天气啊！</strong><br>完整的句子应该是 <code>What a day it is!</code> 英语中的感叹句常用what开头（还有how），后面紧跟一个<code>名词</code>或<code>名词性短语（包括连系动词）</code> ，然后是<code>主语</code>和<code>谓语</code>采用正常语序，句尾用感叹号。</li></ul><p>不仅主谓语可以省略、形容词也可以省略，根据语境判断意思。</p><ul><li><strong>just then</strong> = <code>at that moment</code></li><li><p><strong>by train</strong><br>by + 交通工具（不能有任何<strong>修饰词</strong> &amp; <strong>复数</strong>）</p><blockquote><p>I went out <code>by bus</code>. = I went out <code>on two buses</code>.</p></blockquote></li><li><p>I am coming to see you. 我这就来看你。<br>用 <code>现在进行时</code> 表达一般将来时。（同样用法的单词：go、come、leave、arrive、land、die、meet、join等）</p><blockquote><p>I am going … 我将要离开<br>I am coming … 马上来，这就来<br>I am leaving … 我将要离开</p></blockquote></li><li><p><strong>Dear me! 天啊！</strong> </p></li></ul><h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><ol><li><p><strong><code>一般现在时</code></strong><br>用英语叫做 <strong><code>Now, Often and Always</code></strong> 表示现在和经常发生的动作。<br><code>一般现在时</code> —— 是一种习惯，真理，过去、现在和将来都会发生的事情。</p></li><li><p><strong><code>频率副词</code></strong><br>频率副词往往放在句子中间，<strong>实义动词</strong>之前，<strong>非实义动词</strong> 之后。<br><strong>非实义动词：</strong><br>①系动词（be）<br>②助动词。帮助动词构成时态的（do、does、will、shall、have、has…）<br>③情态动词（must、may、can … ）</p></li></ol><h2 id="课后习题"><a href="#课后习题" class="headerlink" title="课后习题"></a>课后习题</h2><ul><li><p>“现阶段”也是 <strong><code>一般现在时</code></strong> 的一种。<br>I am working as a teacher. 这段时间我在当老师。</p></li><li><p>I frequently go to bed <strong><code>hungry</code></strong>.<br>这里的 <code>hungry</code> 是 <code>形容词</code>作状语</p></li><li><p><strong>lately</strong> (=<code>recently</code>) 最近</p></li><li><p>look, see, watch<br>look：不及物动词。+ <code>介词</code><br>see：强调结果，<strong>看见</strong>。 + <code>宾语</code><br>watch：+ <code>宾语</code> 指能够<strong>活动</strong> 的东西，非静止之物。</p></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;单词&quot;&gt;&lt;a href=&quot;#单词&quot; class=&quot;headerlink&quot; title=&quot;单词&quot;&gt;&lt;/a&gt;单词&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;until&lt;/strong&gt; &lt;em&gt;prep.&lt;/em&gt; 直到&lt;br&gt;后面加 &lt;strong&gt;&lt;code&gt;时间状语&lt;/code&gt;&lt;/strong&gt; 从句，前面是主句。&lt;br&gt;until可以看成是一个&lt;strong&gt;终止线&lt;/strong&gt;。&lt;blockquote&gt;
-&lt;p&gt;I stay in bed until lunchtime.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-      <category term="英语" scheme="https://ithou.cc/categories/%E8%8B%B1%E8%AF%AD/"/>
-    
-    
-      <category term="新概念英语2" scheme="https://ithou.cc/tags/%E6%96%B0%E6%A6%82%E5%BF%B5%E8%8B%B1%E8%AF%AD2/"/>
     
   </entry>
   
