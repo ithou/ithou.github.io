@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ithee.cn/"/>
-  <updated>2018-09-13T12:16:22.767Z</updated>
+  <updated>2018-10-02T15:23:03.556Z</updated>
   <id>https://ithee.cn/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Python 学习笔记（二）——列表</title>
+    <link href="https://ithee.cn/archives/cc3bc458.html"/>
+    <id>https://ithee.cn/archives/cc3bc458.html</id>
+    <published>2018-10-02T15:21:00.000Z</published>
+    <updated>2018-10-02T15:23:03.556Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>1. 列表格式</strong><br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">bicycles = [<span class="string">'trek'</span>, <span class="string">'cannondale'</span>, <span class="string">'redline'</span>, <span class="string">'specialized'</span>]</span><br><span class="line">print(bicycles)  <span class="comment"># 打印列表，包括方括号</span></span><br></pre></td></tr></table></figure></p><p><strong>2. 使用 <code>.title()</code>函数让首字母大写</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(bicycles[0].title())</span><br></pre></td></tr></table></figure></p><p><strong>3. 访问最后一个元素</strong><br>Python为访问最后一个列表元素提供了一种特殊语法。通过将索引指定为<code>-1</code> ，可让Python返回 <strong>最后一个列表元素</strong>。 这种语法很有用，因为你经常需要在不知道列表长度的情况下访问最后的元素。这种约定也适用于其他负数索引，例如，索引 <code>-2</code> 返回 <strong>倒数第二个</strong> 列表元素，索引 <code>-3</code> 返回 <strong>倒数第三个</strong> 列表元素，以<br>此类推。 </p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">print(bicycles[<span class="number">3</span>])</span><br><span class="line">print(bicycles[<span class="number">-1</span>])</span><br><span class="line"></span><br><span class="line">names = [<span class="string">'zhang'</span>, <span class="string">'wang'</span>]</span><br><span class="line">print(names)</span><br><span class="line">print(names[<span class="number">0</span>])</span><br><span class="line">print(names[<span class="number">1</span>])</span><br><span class="line">print(names[<span class="number">0</span>].title() + <span class="string">' Come on!'</span>)</span><br><span class="line">print(names[<span class="number">1</span>].title() + <span class="string">' You too!'</span>)</span><br></pre></td></tr></table></figure><p><strong>4. 修改、添加和删除元素 </strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">motocycles = [&apos;honda&apos;, &apos;yamaha&apos;, &apos;suzuki&apos;]</span><br><span class="line"></span><br><span class="line">motocycles[0] = &apos;ducati&apos;  # 修改</span><br><span class="line"></span><br><span class="line">motorcycles = [&apos;honda&apos;, &apos;yamaha&apos;, &apos;suzuki&apos;]</span><br><span class="line">motorcycles.append(&apos;ducati&apos;)  # 增加元素</span><br></pre></td></tr></table></figure></p><p><strong>5. 方法 append()</strong><br>方法 <code>append()</code> 让动态地创建列表易如反掌。例如，你可以先创建一个<strong>空列表</strong>，再使用一系列的 <code>append()</code> 语句添加元素。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">motorcycles = []</span><br><span class="line">motorcycles.append(<span class="string">'A'</span>)</span><br><span class="line">motorcycles.append(<span class="string">'B'</span>)</span><br><span class="line">motorcycles.append(<span class="string">'C'</span>)</span><br><span class="line">print(motorcycles)</span><br></pre></td></tr></table></figure></p><p><strong>6. 插入insert()方法</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">motorcycles.insert(0, &apos;test&apos;)  # insert()插入元素，原先元素右移 </span><br><span class="line">print(motorcycles)</span><br></pre></td></tr></table></figure></p><p>结果：<code>[&#39;test&#39;, &#39;A&#39;, &#39;B&#39;, &#39;C&#39;]</code></p><p><strong>7. 在知道索引的条件下，删除元素</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">motorcycles = [&apos;honda&apos;, &apos;yamaha&apos;, &apos;suzuki&apos;]</span><br><span class="line">del motorcycles[0]  # 如果知道要删除的元素在列表中的位置，可使用del语句。使用del 可删除任何位置处的列表元素，条件是知道其索引 </span><br><span class="line">print(motorcycles)</span><br></pre></td></tr></table></figure></p><p><strong>8. pop() 弹出元素</strong><br>方法pop() 可删除列表末尾的元素，并让你能够接着使用它。术语弹出 （pop）源自这样的类比：列表就像一个栈，而删除列表末尾的元素相当于弹出栈顶元素。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">motorcycles = [<span class="string">'honda'</span>, <span class="string">'yamaha'</span>, <span class="string">'suzuki'</span>]</span><br><span class="line">print(motorcycles)</span><br><span class="line">motorcycles.pop()</span><br><span class="line">print(motorcycles)</span><br><span class="line"></span><br><span class="line">motorcycles = [<span class="string">'honda'</span>, <span class="string">'yamaha'</span>, <span class="string">'suzuki'</span>]</span><br><span class="line">first_owned = motorcycles.pop(<span class="number">0</span>)  <span class="comment"># 弹出列表中任何位置处的元素 </span></span><br><span class="line">print(<span class="string">"The first motocycle I owned was a "</span> + first_owned.title() + <span class="string">"."</span>)</span><br></pre></td></tr></table></figure></p><p><strong>9. 按值删除元素</strong><br>有时候，你不知道要从列表中删除的值所处的位置。如果你只知道要删除的元素的值，可使用方法 <code>remove()</code> 。<br><strong>注意:</strong> 方法remove() 只删除<strong>第一个</strong>指定的值。如果要删除的值可能在列表中出现多次，就需要使用循环来判断是否删除了所有这样的值。你将在第7章学习如何这样做。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">motorcycles = [<span class="string">'honda'</span>, <span class="string">'yamaha'</span>, <span class="string">'suzuki'</span>, <span class="string">'ducati'</span>]</span><br><span class="line">motorcycles.remove(<span class="string">'ducati'</span>)</span><br><span class="line">print(motorcycles)</span><br></pre></td></tr></table></figure></p><p><strong>10. 动手试一试</strong><br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">name_list = [<span class="string">'Zheng'</span>, <span class="string">'Xie'</span>, <span class="string">'Xu'</span>, <span class="string">'Gong'</span>]</span><br><span class="line">print(<span class="string">'Xu'</span> + <span class="string">'无法赴约'</span>)</span><br><span class="line">name_list[<span class="number">2</span>] = <span class="string">'Wang'</span> print(str(name_list) + <span class="string">" Xu替换为Wang"</span>)  <span class="comment"># 用str是因为，name_list是列表这种数据结构，需要转换为string类型的</span></span><br></pre></td></tr></table></figure></p><p><strong>11. 总结</strong><br>别忘了，每当你使用pop() 时，被弹出的元素就不再在列表中了。 如果你不确定该使用del 语句还是pop() 方法，下面是一个简单的判断标准：如果你要从列表中删除一个元素，且不再以任何方式使用它，就使用del 语句；如果你 要在删除元素后还能继续使用它，就使用方法pop() 。<br><code>del</code> 按索引删除<br><code>pop</code> 弹出最后一个<br><code>insert(x, &#39;&#39;)</code> 插入<br><code>remove()</code> 按值删除</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;strong&gt;1. 列表格式&lt;/strong&gt;&lt;br&gt;&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span clas
+      
+    
+    </summary>
+    
+      <category term="Code" scheme="https://ithee.cn/categories/Code/"/>
+    
+    
+      <category term="Python" scheme="https://ithee.cn/tags/Python/"/>
+    
+  </entry>
   
   <entry>
     <title>计算机三级总结</title>
@@ -435,24 +460,6 @@
       <category term="杂文" scheme="https://ithee.cn/tags/%E6%9D%82%E6%96%87/"/>
     
       <category term="典故" scheme="https://ithee.cn/tags/%E5%85%B8%E6%95%85/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>微不足道</title>
-    <link href="https://ithee.cn/archives/1d7d4e43.html"/>
-    <id>https://ithee.cn/archives/1d7d4e43.html</id>
-    <published>2018-05-29T07:05:58.000Z</published>
-    <updated>2018-06-18T07:09:49.704Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="微不足道"><a href="#微不足道" class="headerlink" title="微不足道"></a>微不足道</h3><a id="more"></a><p><img src="https://images-1252723380.cos.ap-chengdu.myqcloud.com/awards/%E5%9B%BD%E5%AE%B6%E5%8A%B1%E5%BF%97.png" alt="enter description here"></p><p><img src="https://images-1252723380.cos.ap-chengdu.myqcloud.com/awards/lqb.png" alt="enter description here"></p><p><img src="https://images-1252723380.cos.ap-chengdu.myqcloud.com/awards/%E6%A0%A1%E4%B8%80%E7%AD%89.png" alt="enter description here"></p><p><img src="https://images-1252723380.cos.ap-chengdu.myqcloud.com/awards/2018cdcm.png" alt="enter description here"></p><p><img src="https://images-1252723380.cos.ap-chengdu.myqcloud.com/awards/2017cdcm.png" alt="enter description here"></p><p><img src="https://images-1252723380.cos.ap-chengdu.myqcloud.com/awards/2017mdsk.png" alt="enter description here"></p><p><img src="https://images-1252723380.cos.ap-chengdu.myqcloud.com/awards/yxty.png" alt="enter description here"></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;微不足道&quot;&gt;&lt;a href=&quot;#微不足道&quot; class=&quot;headerlink&quot; title=&quot;微不足道&quot;&gt;&lt;/a&gt;微不足道&lt;/h3&gt;
-    
-    </summary>
-    
     
   </entry>
   
