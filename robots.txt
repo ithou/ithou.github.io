@@ -1,13 +1,5 @@
 User-agent: *
 Allow: /
-Allow: /archives/
-Allow: /categories/
-Allow: /tags/ 
-Allow: /home/
-Allow: /about/
-Disallow: /vendors/
-Disallow: /fonts/
-Disallow: /fancybox/
 
 Sitemap: http://ithee.cn/sitemap.xml
 Sitemap: http://ithee.cn/baidusitemap.xml
