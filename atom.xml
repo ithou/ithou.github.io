@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ithee.cn/"/>
-  <updated>2018-12-04T05:34:25.356Z</updated>
+  <updated>2018-12-04T16:10:42.641Z</updated>
   <id>https://ithee.cn/</id>
   
   <author>
@@ -15,6 +15,91 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>修改Pyhton和pip默认版本</title>
+    <link href="https://ithee.cn/archives/c027620b.html"/>
+    <id>https://ithee.cn/archives/c027620b.html</id>
+    <published>2018-12-04T15:50:00.000Z</published>
+    <updated>2018-12-04T16:10:42.641Z</updated>
+    
+    <content type="html"><![CDATA[<p>Linux下一般默认装了2和3两个版本，运行 <code>python</code> 命令如果不出意外，默认运行的是 <strong>python2</strong>，而Python2和Python3说极端点就是两个语言…… 所以这里将默认的python2改为python3，这将大有裨益、一劳永逸，不然以后会有很多 <strong>坑</strong> 。</p><p>pip同理，有<code>pip</code> 和 <code>pip3</code>，都是 <strong>坑</strong>。</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> python --version  # python默认版本</span><br><span class="line">Python 2.7.12</span><br><span class="line"></span><br><span class="line"><span class="meta">$</span> pip --version  # pip默认版本</span><br><span class="line">pip 8.1.1 from /usr/lib/python2.7/dist-packages (python 2.7)</span><br></pre></td></tr></table></figure><h2 id="修改python默认版本"><a href="#修改python默认版本" class="headerlink" title="修改python默认版本"></a>修改python默认版本</h2><p><strong>方法一：</strong></p><p>修改 <code>~/.bashrc</code> 文件</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim ~/.bashrc</span><br></pre></td></tr></table></figure><p>添加：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">alias python='/usr/bin/python3'</span><br><span class="line">alias pip='/usr/bin/pip3'</span><br></pre></td></tr></table></figure><blockquote><p>如果没有pip3，先安装pip3</p><p>命令： <code>apt-get install python3-pip</code></p></blockquote><p>更新配置：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source ~/.bashrc</span><br></pre></td></tr></table></figure><p>检查：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> python --version</span><br><span class="line">Python 3.5.2</span><br><span class="line"></span><br><span class="line"><span class="meta">$</span> pip --version</span><br><span class="line">pip 8.1.1 from /usr/lib/python3/dist-packages (python 3.5)</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Linux下一般默认装了2和3两个版本，运行 &lt;code&gt;python&lt;/code&gt; 命令如果不出意外，默认运行的是 &lt;strong&gt;python2&lt;/strong&gt;，而Python2和Python3说极端点就是两个语言…… 所以这里将默认的python2改为python3
+      
+    
+    </summary>
+    
+      <category term="Code" scheme="https://ithee.cn/categories/Code/"/>
+    
+    
+      <category term="linux" scheme="https://ithee.cn/tags/linux/"/>
+    
+      <category term="python" scheme="https://ithee.cn/tags/python/"/>
+    
+      <category term="pip" scheme="https://ithee.cn/tags/pip/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>修改Linux默认软件源和pip源</title>
+    <link href="https://ithee.cn/archives/ae72dd55.html"/>
+    <id>https://ithee.cn/archives/ae72dd55.html</id>
+    <published>2018-12-04T15:32:00.000Z</published>
+    <updated>2018-12-04T15:49:45.465Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="修改默认软件源"><a href="#修改默认软件源" class="headerlink" title="修改默认软件源"></a>修改默认软件源</h2><p><strong>Ubuntu</strong> 下的软件源路径为 <code>/etc/apt/source.list</code></p><ol><li><p><code>vim /etc/apt/source.list</code>  删除所有内容</p></li><li><p>修改为 <a href="https://mirror.tuna.tsinghua.edu.cn/help/ubuntu/" target="_blank" rel="noopener">清华大学源</a>，添加以下内容(16.04的)：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释</span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial main restricted universe multiverse</span><br><span class="line"><span class="meta">#</span> deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial main restricted universe multiverse</span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-updates main restricted universe multiverse</span><br><span class="line"><span class="meta">#</span> deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-updates main restricted universe multiverse</span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-backports main restricted universe multiverse</span><br><span class="line"><span class="meta">#</span> deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-backports main restricted universe multiverse</span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-security main restricted universe multiverse</span><br><span class="line"><span class="meta">#</span> deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-security main restricted universe multiverse</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 预发布软件源，不建议启用</span><br><span class="line"><span class="meta">#</span> deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-proposed main restricted universe multiverse</span><br><span class="line"><span class="meta">#</span> deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-proposed main restricted universe multivers</span><br></pre></td></tr></table></figure></li><li><p>运行：<code>apt-get update</code></p></li></ol><a id="more"></a><h2 id="Linux修改pip源"><a href="#Linux修改pip源" class="headerlink" title="Linux修改pip源"></a>Linux修改pip源</h2><p>修改成 <a href="https://pypi.doubanio.com/simple/" target="_blank" rel="noopener">豆瓣源</a> 或者 <a href="https://pypi.tuna.tsinghua.edu.cn/simple/" target="_blank" rel="noopener">清华源</a></p><p>运行命令：<code>vim ~/.pip/pip.conf</code>，删除所有内容并添加：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[global]</span><br><span class="line">index-url = https://pypi.tuna.tsinghua.edu.cn/simple</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;修改默认软件源&quot;&gt;&lt;a href=&quot;#修改默认软件源&quot; class=&quot;headerlink&quot; title=&quot;修改默认软件源&quot;&gt;&lt;/a&gt;修改默认软件源&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Ubuntu&lt;/strong&gt; 下的软件源路径为 &lt;code&gt;/etc/apt/source.list&lt;/code&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;vim /etc/apt/source.list&lt;/code&gt;  删除所有内容&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;修改为 &lt;a href=&quot;https://mirror.tuna.tsinghua.edu.cn/help/ubuntu/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;清华大学源&lt;/a&gt;，添加以下内容(16.04的)：&lt;/p&gt;
+&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#&lt;/span&gt; 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial main restricted universe multiverse&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#&lt;/span&gt; deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial main restricted universe multiverse&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-updates main restricted universe multiverse&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#&lt;/span&gt; deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-updates main restricted universe multiverse&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-backports main restricted universe multiverse&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#&lt;/span&gt; deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-backports main restricted universe multiverse&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-security main restricted universe multiverse&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#&lt;/span&gt; deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-security main restricted universe multiverse&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#&lt;/span&gt; 预发布软件源，不建议启用&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#&lt;/span&gt; deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-proposed main restricted universe multiverse&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#&lt;/span&gt; deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-proposed main restricted universe multivers&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;运行：&lt;code&gt;apt-get update&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+    
+    </summary>
+    
+      <category term="Code" scheme="https://ithee.cn/categories/Code/"/>
+    
+    
+      <category term="linux" scheme="https://ithee.cn/tags/linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Git基本操作截图</title>
+    <link href="https://ithee.cn/archives/e969eecb.html"/>
+    <id>https://ithee.cn/archives/e969eecb.html</id>
+    <published>2018-12-04T15:26:00.000Z</published>
+    <updated>2018-12-04T15:45:33.895Z</updated>
+    
+    <content type="html"><![CDATA[<p>下面均在 <code>linux</code> 上操作的，和 Push到 <code>Github</code> 上基本无异。</p><p><img src="https://images-1252723380.cos.ap-chengdu.myqcloud.com/Git%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/1.png" alt="1"></p><a id="more"></a><p><img src="https://images-1252723380.cos.ap-chengdu.myqcloud.com/Git%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/2.png" alt="2"></p><p><img src="https://images-1252723380.cos.ap-chengdu.myqcloud.com/Git%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/3.png" alt="3"></p><p><img src="https://images-1252723380.cos.ap-chengdu.myqcloud.com/Git%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/4.png" alt="4"></p><p><img src="https://images-1252723380.cos.ap-chengdu.myqcloud.com/Git%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/5.png" alt="5"></p><p><img src="https://images-1252723380.cos.ap-chengdu.myqcloud.com/Git%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/6.png" alt="6"></p><p><img src="https://images-1252723380.cos.ap-chengdu.myqcloud.com/Git%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/7.png" alt="7"></p><p><img src="https://images-1252723380.cos.ap-chengdu.myqcloud.com/Git%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/8.png" alt="8"></p><p><img src="https://images-1252723380.cos.ap-chengdu.myqcloud.com/Git%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/9.png" alt="9"></p><p><img src="https://images-1252723380.cos.ap-chengdu.myqcloud.com/Git%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/10.png" alt="10"></p><p><img src="https://images-1252723380.cos.ap-chengdu.myqcloud.com/Git%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/11.png" alt="11"></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;下面均在 &lt;code&gt;linux&lt;/code&gt; 上操作的，和 Push到 &lt;code&gt;Github&lt;/code&gt; 上基本无异。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://images-1252723380.cos.ap-chengdu.myqcloud.com/Git%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/1.png&quot; alt=&quot;1&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Code" scheme="https://ithee.cn/categories/Code/"/>
+    
+    
+      <category term="github" scheme="https://ithee.cn/tags/github/"/>
+    
+      <category term="git" scheme="https://ithee.cn/tags/git/"/>
+    
+  </entry>
   
   <entry>
     <title>记录瞬间在脑海浮现的几首诗</title>
@@ -459,69 +544,6 @@
     
     
       <category term="Code" scheme="https://ithee.cn/tags/Code/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>GitHub Pages搭建博客（二）——环境搭建</title>
-    <link href="https://ithee.cn/archives/22e23869.html"/>
-    <id>https://ithee.cn/archives/22e23869.html</id>
-    <published>2018-07-19T14:40:00.000Z</published>
-    <updated>2018-11-16T16:32:44.729Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="安装Git和Node-js（Windows版）"><a href="#安装Git和Node-js（Windows版）" class="headerlink" title="安装Git和Node.js（Windows版）"></a>安装Git和Node.js（Windows版）</h2><a id="more"></a><h3 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h3><p>下载：<a href="https://git-scm.com/download/win" target="_blank" rel="noopener">https://git-scm.com/download/win</a> </p><p><img src="https://images-1252723380.cos.ap-chengdu.myqcloud.com/Hexo%E6%90%AD%E5%BB%BA/git%E4%B8%8B%E8%BD%BD-min.png" alt="enter description here"></p><p>选择32 / 64位，下载后双击安装，然后啥都别管，一路<code>Next</code>走到黑！</p><p><img src="https://images-1252723380.cos.ap-chengdu.myqcloud.com/Hexo%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85git-min.png" alt="enter description here"></p><p>完事之后…… <code>任意目录鼠标右键</code>→<code>Git Bash Here</code>→<code>git --version</code> 会看到<strong>Git版本信息</strong>。</p><p><img src="https://images-1252723380.cos.ap-chengdu.myqcloud.com/Hexo%E6%90%AD%E5%BB%BA/git-bash-here-min.png" alt="enter description here"></p><p><img src="https://images-1252723380.cos.ap-chengdu.myqcloud.com/Hexo%E6%90%AD%E5%BB%BA/gitversion-min.png" alt="enter description here"></p><h3 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h3><p>下载链接：<a href="https://nodejs.org/en/" target="_blank" rel="noopener">https://nodejs.org/en/</a> </p><p>安装同上，一路<code>NEXT</code>。</p><p><img src="https://images-1252723380.cos.ap-chengdu.myqcloud.com/Hexo%E6%90%AD%E5%BB%BA/node-min.png" alt="enter description here"></p><p><b><font color="orange"><em>P.s 挂代理加速下载</em></font></b></p><h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>在<code>D盘</code>（其他盘也可以）创建文件夹<code>F:/Hexo</code>右键鼠标，点击<code>Git Bash Here</code>，输入以下命令安装：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g </span><br><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure><p><img src="https://images-1252723380.cos.ap-chengdu.myqcloud.com/Hexo%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85hexo-min.png" alt="enter description here"></p><p><img src="https://images-1252723380.cos.ap-chengdu.myqcloud.com/Hexo%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85hexo2-min.png" alt="enter description here"></p><h2 id="配置ssh密钥"><a href="#配置ssh密钥" class="headerlink" title="配置ssh密钥"></a>配置ssh密钥</h2><p>SSH密钥可以让本地git项目与远程的Github建立联系。<br>密钥文件保存目录：<code>C:\Users\xxx\ .ssh</code> </p><p><strong>创建密钥</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;xx@xx.xx&quot;  # 替换成自己的邮箱</span><br></pre></td></tr></table></figure></p><p><img src="https://images-1252723380.cos.ap-chengdu.myqcloud.com/Hexo%E6%90%AD%E5%BB%BA/%E9%85%8D%E7%BD%AEssh-min.png" alt="enter description here"></p><p>复制密钥到剪切板（也可以进入<code>C:\Users\xxx\ .ssh\id_rsa.pub</code>文件复制）</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">clip &lt; ~/.ssh/id_rsa.pub  # 此时密钥已经通过命令复制好了</span><br></pre></td></tr></table></figure><p>登录 <a href="https://github.com" target="_blank" rel="noopener"><strong>GitHub</strong></a></p><p><img src="https://images-1252723380.cos.ap-chengdu.myqcloud.com/Hexo%E6%90%AD%E5%BB%BA/%E9%85%8D%E7%BD%AEssh-2-min.png" alt="enter description here"></p><p><img src="https://images-1252723380.cos.ap-chengdu.myqcloud.com/Hexo%E6%90%AD%E5%BB%BA/%E9%85%8D%E7%BD%AEssh-3-min.png" alt="enter description here"></p><p><img src="https://images-1252723380.cos.ap-chengdu.myqcloud.com/Hexo%E6%90%AD%E5%BB%BA/%E9%85%8D%E7%BD%AEssh-4-min.png" alt="enter description here"></p><p><img src="https://images-1252723380.cos.ap-chengdu.myqcloud.com/Hexo%E6%90%AD%E5%BB%BA/%E9%85%8D%E7%BD%AEssh-5-min.png" alt="enter description here"> </p><h2 id="初始化Hexo"><a href="#初始化Hexo" class="headerlink" title="初始化Hexo"></a>初始化Hexo</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure><p><img src="https://images-1252723380.cos.ap-chengdu.myqcloud.com/Hexo%E6%90%AD%E5%BB%BA/%E5%88%9D%E5%A7%8B%E5%8C%96hexo-min.png" alt="enter description here"></p><p><strong>浏览器打开 <code>http://localhost:4000</code></strong></p><p><img src="https://images-1252723380.cos.ap-chengdu.myqcloud.com/Hexo%E6%90%AD%E5%BB%BA/hexo-s-min.png" alt="enter description here"></p><h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>至此，博客搭建已经成功了一大半了！剩下的还有本地实时同步到<strong>GitHub Pages</strong>，优化界面等等。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;安装Git和Node-js（Windows版）&quot;&gt;&lt;a href=&quot;#安装Git和Node-js（Windows版）&quot; class=&quot;headerlink&quot; title=&quot;安装Git和Node.js（Windows版）&quot;&gt;&lt;/a&gt;安装Git和Node.js（Windows版）&lt;/h2&gt;
-    
-    </summary>
-    
-      <category term="博客搭建" scheme="https://ithee.cn/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Window终止进程の方法</title>
-    <link href="https://ithee.cn/archives/7a998ac7.html"/>
-    <id>https://ithee.cn/archives/7a998ac7.html</id>
-    <published>2018-06-25T13:38:12.000Z</published>
-    <updated>2018-09-05T15:58:30.601Z</updated>
-    
-    <content type="html"><![CDATA[<p><code>Windows</code>下终止<code>MySQL</code>进程的方法：</p><p>管理员身份运行<code>cmd</code> → <code>netstat -ano | findstr 3306</code></p><a id="more"></a><p>然后记录下<code>PID值</code><br>终止进程→ <code>taskkill /F /PID [PID值]</code></p><p><img src="https://images-1252723380.cos.ap-chengdu.myqcloud.com/taskkill-1.png" alt="enter description here"></p><p><img src="https://images-1252723380.cos.ap-chengdu.myqcloud.com/taskkill-2.png" alt="enter description here"></p><p><img src="https://images-1252723380.cos.ap-chengdu.myqcloud.com/taskkill-3.png" alt="enter description here"></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;code&gt;Windows&lt;/code&gt;下终止&lt;code&gt;MySQL&lt;/code&gt;进程的方法：&lt;/p&gt;
-&lt;p&gt;管理员身份运行&lt;code&gt;cmd&lt;/code&gt; → &lt;code&gt;netstat -ano | findstr 3306&lt;/code&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Code" scheme="https://ithee.cn/categories/Code/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Web测试</title>
-    <link href="https://ithee.cn/archives/5871c336.html"/>
-    <id>https://ithee.cn/archives/5871c336.html</id>
-    <published>2018-06-25T05:06:48.207Z</published>
-    <updated>2018-06-25T05:11:43.218Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>总结</strong></p><a id="more"></a><ul><li>状态码</li><li>HTML常用标签</li><li>并发用户数<br>指的是<code>session会话</code>数目</li><li>HTTP: 无连接协议，FTP: 有连接</li><li>链接测试工具：Xenu，测试<strong>死链接</strong></li><li>textbox - 用户名</li><li>text area - 个性签名等</li><li>Web以HTML与HTTP(S)协议为基基础</li><li>性能测试目的：为了获得性能指标</li><li>名词解释<br>点击率(Hits)：客户端每秒向服务器提交HTTP数据包数量<br>Working Set: 工作集。虚拟地址空间，在物理内存中的一部分。<br>session: 会话。用户浏览网站到关闭网站的时间段。</li><li>url语法格式</li><li>html文档结构</li><li>性能测试内容<br>响应、速度、压力、负载测试</li><li>链接测试内容<br>检查链接的页面是否存在，是否有孤立的页面</li><li>password测试<br>输入数据是否隐藏</li><li>滚动条测试<br>（图,书上）拖动滚动条看是否刷新，快速拖看是否闪屏</li><li>session测试<br>超时</li><li>指标 （6个）<br>时间、吞吐、请求、hits …</li><li>应该有的功能<br>生成脚本-产生压力-实时监控-分析</li><li>简答题<br>csdn登录页面（书上）<strong>功能测试用例</strong><br>名字、类型、</li><li>简答题<br>lx..blog<br>loadrunner做性能测试（几句话）<br>制定方案，创建虚拟用户，设计测试场景（注册、登录），执行场景，分析执行结果。</li></ul>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;strong&gt;总结&lt;/strong&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="期末" scheme="https://ithee.cn/categories/%E6%9C%9F%E6%9C%AB/"/>
-    
-    
-      <category term="Web测试" scheme="https://ithee.cn/tags/Web%E6%B5%8B%E8%AF%95/"/>
     
   </entry>
   
