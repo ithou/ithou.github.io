@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ithee.cn/"/>
-  <updated>2018-12-06T13:28:10.607Z</updated>
+  <updated>2018-12-14T17:03:14.183Z</updated>
   <id>https://ithee.cn/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Python Django判断用户是否登录</title>
+    <link href="https://ithee.cn/archives/3304cc9e.html"/>
+    <id>https://ithee.cn/archives/3304cc9e.html</id>
+    <published>2018-12-14T17:01:00.000Z</published>
+    <updated>2018-12-14T17:03:14.183Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="在Django里面判断用户是否登录"><a href="#在Django里面判断用户是否登录" class="headerlink" title="在Django里面判断用户是否登录"></a>在Django里面判断用户是否登录</h2><p>如果登录，则输出问候语。否则提供登录入口。</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;% if user.is_authenticated %&#125;</span><br><span class="line">    Hello, &#123;&#123; user.username &#125;&#125;</span><br><span class="line">&#123;% else %&#125;</span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"&#123;% url 'users:login' %&#125;"</span>&gt;</span>登录<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;在Django里面判断用户是否登录&quot;&gt;&lt;a href=&quot;#在Django里面判断用户是否登录&quot; class=&quot;headerlink&quot; title=&quot;在Django里面判断用户是否登录&quot;&gt;&lt;/a&gt;在Django里面判断用户是否登录&lt;/h2&gt;&lt;p&gt;如果登录，则输出问候
+      
+    
+    </summary>
+    
+      <category term="Code" scheme="https://ithee.cn/categories/Code/"/>
+    
+    
+      <category term="Python" scheme="https://ithee.cn/tags/Python/"/>
+    
+      <category term="Django" scheme="https://ithee.cn/tags/Django/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Lesson 14 Do you speak English?</title>
     <link href="https://ithee.cn/archives/afd601f3.html"/>
     <id>https://ithee.cn/archives/afd601f3.html</id>
     <published>2018-12-06T10:56:00.000Z</published>
-    <updated>2018-12-06T13:28:10.607Z</updated>
+    <updated>2018-12-06T13:29:15.682Z</updated>
     
     <content type="html"><![CDATA[<h2 id="New-words-and-expressions"><a href="#New-words-and-expressions" class="headerlink" title="New words and expressions"></a>New words and expressions</h2><ul><li><p><strong>amusing.</strong> <em>adj. 好笑的</em></p><p>amusing 强调好笑，interesting 强调有趣(广义的)，不好笑也Okay.</p><p>funny. 更广义的好笑的、有趣的。(可指贬义)</p></li><li><p><strong>experience</strong> <em>n. 经历(可数); 经验(不可数)</em></p><blockquote><p>I have a number of experience. 我有很多经验</p><p>I have a number of experiences. 我有很多经历</p></blockquote><p>experienced. 有经历的</p></li><li><p><strong>wave</strong> <em>v. 招手</em></p><p><code>wave to sb</code> </p><blockquote><p>On the way, a young man waved to me. I stopped and he asked me for a lift.</p></blockquote></li></ul><a id="more"></a><ul><li><p><strong>lift</strong> <em>n. 搭便车（名词）</em></p><blockquote><p>I take a lift. 我搭了一个便车。</p></blockquote><p><code>give sb a lift</code> 让某人搭便车</p></li><li><p><strong>reply</strong> <em>n. 回复</em></p><p><code>answer sth</code> = <code>reply to the anser</code></p></li><li><p><strong>language</strong> <em>n.语言</em></p><p>native language. 母语</p></li><li><p><strong>journey</strong> <em>n. 旅行</em></p><p><strong>trip</strong>: 短距离的旅行或者出差，go on business = go on a trip</p><p><strong>travel:</strong> 长途旅行，周游</p><p><strong>tour:</strong> 单纯为了玩，tourist. 游客</p><p><strong>journey:</strong> 广义的旅行、旅途。</p><blockquote><p> 整个旅途：During the journey. </p><p>五分钟旅途：five minutes’ walk（意思是走五分钟就到了） ≈ five minutes’ journey（五分钟路程，不管用什么方式）</p></blockquote></li></ul><h2 id="Passage"><a href="#Passage" class="headerlink" title="Passage"></a>Passage</h2><ol><li><p>I had an amusing experience last year. After I had left a small village in the south of France, I drove on to the next town. 去年我有过一次有趣的经历。在离开法国南部的一个小村庄后，我继续驶往下一个城镇。</p><p><strong>After I had left …, I drove on …</strong> 这是一个由 <code>After</code> 引导的 <strong>时间状语从句</strong>。发生在前的动作用过去完成时 <code>had done</code> ，发生在后的动作用 <code>done</code>过去时。</p><p><code>drive to</code> 开车去某地</p><p><code>on</code> —— 这个单词用得极好！on 加在动词之后表示继续的意思，“我”离开村庄之后就 <strong>继续</strong> 驶往下一个目的地，具有连贯性。</p><blockquote><p>《My heart will go on》 我心永恒</p><p>go on. 继续</p></blockquote></li><li><p>On the way, a young man waved to me. I stopped and he asked me for a list. 途中，一个青年人向我招手。我把车停下，他向我提出要求搭车。</p></li><li><p>As soon as he had got into the car, I said good morning to him in French and he replied in the same language. 他一上车，我就用法语向他问早上好，他也用同样的发育回答我。</p><p><strong>As soon as …  一……就……</strong> 时间状语从句，发生在前的动作用 had done, 发生在后的动作用 done。</p><blockquote><p>As soon as I had recevied the letter, I gave her a ring. 我一收到信就回了她电话。</p><p>As soon as I had entered the room, I took off my coat right now.</p></blockquote></li><li><p>Apart from a few words, I do not know an French at all. 除了个别几个单词外，我根本不会法语。</p><p>apart from. 除了……以外，不……</p><p>except for: 放句首或者句中</p><p><strong>not … at all</strong> 一点都不</p></li><li><p>Neither of us spoke during the joruney. 途中我们（俩）谁也没说话。</p><p><code>neither of sb</code> 两个人中任何一个都不（自带否定含义，不和 not 混用）</p><p><code>either of us</code> 两个人中任何一个都</p><p>如果不止两个人，用：<code>none of us</code> </p></li><li><p>I had nearly reached the town, when the young man suddenly said, very slowly, ‘Do you speak English?’ As I soon learnt, he was English himself ! 就要到达那个镇时，那青年突然开了口，慢慢说道：“你会讲英语吗？” 我很快了解到，他自己就是英国人！</p><p><strong>同样是状语从句，先发生的动作先用过去完成时，后发生的动作用过去时。</strong></p><p>as I soon learnt 我很快了解到。</p><blockquote><p>As we know, it is the coldest day in the winter! What a day!  正如我所知道的，那是一年中最冷的天！冷就一个字！</p></blockquote><ul><li><p>He was English himself ! </p><p>himself 是为了强调他就是个英国人！有种豁然开朗的感觉。</p><blockquote><p>I am Chinese myself ! 我就是个中国人！</p></blockquote></li></ul></li></ol><h2 id="Key-Structures"><a href="#Key-Structures" class="headerlink" title="Key Structures"></a>Key Structures</h2><p><strong>过去完成时通常用来表示发生在过去的两个事件、动作中哪一个发生在前。</strong></p><p>连词：As soon as, After, Before等这种明显带有时间先后顺序的词。</p><h2 id="Special-difficulties"><a href="#Special-difficulties" class="headerlink" title="Special difficulties"></a>Special difficulties</h2><p>except, except for, apart from区别</p><h2 id="Multiple-choice-questions"><a href="#Multiple-choice-questions" class="headerlink" title="Multiple choice questions"></a>Multiple choice questions</h2><ol><li><p>Neither of us spoke. We ___ .</p><p>a. neither spoke        b. either spoke</p><p><strong>c. both didn’t speak</strong>    d. neither didn’t speak</p><p>either / neither 一般不说成 <em>we / I either/neither…</em> ，而说 <em>neitehr / either of sb</em>，neither 不和 not连用</p></li><li><p>salute. <em>v.行军礼；致敬</em></p><p>greet. 问候</p><p>hitch hiker. 搭便车的远足者</p><p>passenger. 乘客，旅客</p></li></ol>]]></content>
     
@@ -546,32 +573,6 @@
     
     
       <category term="Python" scheme="https://ithee.cn/tags/Python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>《教育知识与能力》重点笔记</title>
-    <link href="https://ithee.cn/archives/30e938fe.html"/>
-    <id>https://ithee.cn/archives/30e938fe.html</id>
-    <published>2018-10-08T15:00:00.000Z</published>
-    <updated>2018-10-16T12:31:57.653Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="中国萌芽阶段思想"><a href="#中国萌芽阶段思想" class="headerlink" title="中国萌芽阶段思想"></a>中国萌芽阶段思想</h2><h3 id="孔子"><a href="#孔子" class="headerlink" title="孔子"></a>孔子</h3><ul><li><code>世界上</code><strong>第一个</strong>提出启发诱导的人。</li><li>因材施教，温故知新</li></ul><h3 id="孟子"><a href="#孟子" class="headerlink" title="孟子"></a>孟子</h3><p>“性善论”</p><a id="more"></a><h3 id="荀子"><a href="#荀子" class="headerlink" title="荀子"></a>荀子</h3><p>“性恶论”</p><h3 id="墨家"><a href="#墨家" class="headerlink" title="墨家"></a>墨家</h3><ul><li>重视科学技术教育和思辨能力</li><li>知识来源有三：<strong>亲知、闻知、说知（推理）</strong></li></ul><h3 id="道家"><a href="#道家" class="headerlink" title="道家"></a>道家</h3><p>遵循自然</p><h3 id="《学记》"><a href="#《学记》" class="headerlink" title="《学记》"></a>《学记》</h3><p><strong><code>世界上第一部</code>教育专著，成文约在战国末期。</strong></p><h2 id="西方萌芽阶段思想"><a href="#西方萌芽阶段思想" class="headerlink" title="西方萌芽阶段思想"></a>西方萌芽阶段思想</h2><h3 id="苏格拉底"><a href="#苏格拉底" class="headerlink" title="苏格拉底"></a>苏格拉底</h3><ul><li><code>西方</code>最早提出启发诱导的人。</li><li>产婆术</li></ul><h3 id="柏拉图"><a href="#柏拉图" class="headerlink" title="柏拉图"></a>柏拉图</h3><ul><li>著作<code>《理想国》</code></li><li>国家理想主义教育思想</li></ul><h3 id="亚里士多德"><a href="#亚里士多德" class="headerlink" title="亚里士多德"></a>亚里士多德</h3><ul><li>百科全书式哲学家</li><li>《政治学》、《形而下学》</li><li><strong>西方首次提出教育遵循自然</strong></li><li>对儿童进行和谐教育</li></ul><h3 id="昆体良"><a href="#昆体良" class="headerlink" title="昆体良"></a>昆体良</h3><ul><li><code>《雄辩术原理》/《论演说家的教育》</code> （很重要!!）</li><li><strong><code>西方</code>最早的教育著作。</strong></li></ul><h2 id="教育学独立阶段"><a href="#教育学独立阶段" class="headerlink" title="教育学独立阶段"></a>教育学独立阶段</h2><h3 id="培根"><a href="#培根" class="headerlink" title="培根"></a>培根</h3><p>首次提出了教育独立的思想。</p><h3 id="夸美纽斯"><a href="#夸美纽斯" class="headerlink" title="夸美纽斯"></a>夸美纽斯</h3><ul><li><strong>《大教学论》是教育学开始形成独立学科的标志。</strong></li><li><strong><code>近代</code></strong> 第一本教育著作</li><li>“泛智教育”，把一切事物交给一切人类</li><li>班级授课制</li></ul><h3 id="卢梭"><a href="#卢梭" class="headerlink" title="卢梭"></a>卢梭</h3><ul><li>性善论</li><li>《爱弥儿》宣扬了他的自然主义教育思想</li></ul><h3 id="康德"><a href="#康德" class="headerlink" title="康德"></a>康德</h3><p>最早在大学开授讲座的人。</p><h3 id="裴斯泰洛齐"><a href="#裴斯泰洛齐" class="headerlink" title="裴斯泰洛齐"></a>裴斯泰洛齐</h3><p>第一个提出 <strong>教育心理化</strong></p><h3 id="洛克（英国）"><a href="#洛克（英国）" class="headerlink" title="洛克（英国）"></a>洛克（英国）</h3><ul><li><code>白板说</code></li><li>《教育漫话》</li><li>绅士教育</li></ul><h2 id="规范教育学建立"><a href="#规范教育学建立" class="headerlink" title="规范教育学建立"></a>规范教育学建立</h2><h3 id="赫尔巴特"><a href="#赫尔巴特" class="headerlink" title="赫尔巴特"></a>赫尔巴特</h3><ul><li><code>现代教育学之父</code></li><li><code>《普通教育学》</code> 标志 <strong>规范教育学</strong> 建立，第一本<strong>现代</strong>教育学著作</li><li>提出教育性原则：<strong>我想不出任何无教学的教育，也想不出任何无教育的教学</strong></li></ul><h3 id="杜威"><a href="#杜威" class="headerlink" title="杜威"></a>杜威</h3><ul><li>现代教育理论</li><li><code>新三中心论</code>：儿童中心、活动中心、经验中心</li><li>代表作 <code>《民主主义与教育》</code></li><li>教学无目的论</li></ul><h2 id="马克思主义教学"><a href="#马克思主义教学" class="headerlink" title="马克思主义教学"></a>马克思主义教学</h2><ul><li><strong><code>凯洛夫《教育学》——世界公认第一步马克思主义教育著作</code></strong></li><li>（我国）杨贤江——《教育学大纲》</li></ul><h2 id="现代教育理论流派"><a href="#现代教育理论流派" class="headerlink" title="现代教育理论流派"></a>现代教育理论流派</h2><h3 id="布鲁纳"><a href="#布鲁纳" class="headerlink" title="布鲁纳"></a>布鲁纳</h3><p><code>《教育过程》</code> 提出 <strong>结构</strong> 教学论，务必使学生理解该学科的基本结构。</p><h3 id="瓦根舍因"><a href="#瓦根舍因" class="headerlink" title="瓦根舍因"></a>瓦根舍因</h3><p>创立了 <strong>范例教学</strong> </p><h3 id="其他学者"><a href="#其他学者" class="headerlink" title="其他学者"></a>其他学者</h3><p>苏霍姆林斯基《给教师的一百条建议》、《把整个心灵献给孩子》</p><h2 id="教育与社会的发展"><a href="#教育与社会的发展" class="headerlink" title="教育与社会的发展"></a>教育与社会的发展</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1. 生产力对教育的决定作用：</span><br><span class="line">① 制约教育发展的规模和速度</span><br><span class="line">② 制约教育结构的变化</span><br><span class="line">③ 制约教育内容、方法和手段</span><br><span class="line">④ 制约学校的专业设置</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">2. 教育的经济功能</span><br><span class="line">① 再生产劳动力</span><br><span class="line">② 再生产科学知识</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">3. 社会政治经济制度对教育的制约作用</span><br><span class="line">① 决定教育的领导权</span><br><span class="line">② 决定教育的性质</span><br><span class="line">③ 决定教育目的</span><br><span class="line">④ 决定教育内容取舍</span><br><span class="line">⑤ 决定教育体制</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">4. 教育的政治功能</span><br><span class="line">① 培养社会政治经济制度人才</span><br><span class="line">② 传播思想，形成舆论作用</span><br><span class="line">③ 促进民主化进程</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">5. （民族）文化对教育的制约作用</span><br><span class="line">① 影响教育目的的确立</span><br><span class="line">② 影响教育内容的取舍</span><br><span class="line">③ 影响教育方法的使用</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">6. 教育的文化功能</span><br><span class="line">① 传承文化</span><br><span class="line">② 教育传播和交流文化</span><br><span class="line">③ 改造文化</span><br><span class="line">④ 更新和创造文化</span><br></pre></td></tr></table></figure><h3 id="教育的相对独立性"><a href="#教育的相对独立性" class="headerlink" title="教育的相对独立性"></a>教育的相对独立性</h3><ol><li>教育自身历史的 <strong>继承性</strong></li><li>教育与社会发展的 <strong>补平衡性</strong></li><li>教育与其他社会意识形式（文学、伦理、哲学等）的 <strong>平行性</strong></li></ol>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;中国萌芽阶段思想&quot;&gt;&lt;a href=&quot;#中国萌芽阶段思想&quot; class=&quot;headerlink&quot; title=&quot;中国萌芽阶段思想&quot;&gt;&lt;/a&gt;中国萌芽阶段思想&lt;/h2&gt;&lt;h3 id=&quot;孔子&quot;&gt;&lt;a href=&quot;#孔子&quot; class=&quot;headerlink&quot; title=&quot;孔子&quot;&gt;&lt;/a&gt;孔子&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;世界上&lt;/code&gt;&lt;strong&gt;第一个&lt;/strong&gt;提出启发诱导的人。&lt;/li&gt;
-&lt;li&gt;因材施教，温故知新&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;孟子&quot;&gt;&lt;a href=&quot;#孟子&quot; class=&quot;headerlink&quot; title=&quot;孟子&quot;&gt;&lt;/a&gt;孟子&lt;/h3&gt;&lt;p&gt;“性善论”&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="教师资格证" scheme="https://ithee.cn/categories/%E6%95%99%E5%B8%88%E8%B5%84%E6%A0%BC%E8%AF%81/"/>
-    
-    
-      <category term="教育知识与能力" scheme="https://ithee.cn/tags/%E6%95%99%E8%82%B2%E7%9F%A5%E8%AF%86%E4%B8%8E%E8%83%BD%E5%8A%9B/"/>
     
   </entry>
   
