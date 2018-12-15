@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ithee.cn/"/>
-  <updated>2018-12-14T17:03:14.183Z</updated>
+  <updated>2018-12-15T06:29:29.867Z</updated>
   <id>https://ithee.cn/</id>
   
   <author>
@@ -17,11 +17,68 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Django注册views函数编写</title>
+    <link href="https://ithee.cn/archives/14e45321.html"/>
+    <id>https://ithee.cn/archives/14e45321.html</id>
+    <published>2018-12-15T06:29:00.000Z</published>
+    <updated>2018-12-15T06:29:29.867Z</updated>
+    
+    <content type="html"><![CDATA[<p>编写注册模型比较复杂，好好理解下。</p><p>如果数据有效 → 创建新用户对象 <code>new_user</code> →已验证的用户 <code>authenticated_user = authenticate(username, password)</code> → 登录并重定向 → return</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">register</span><span class="params">(request)</span>:</span></span><br><span class="line">    <span class="string">"""注册"""</span></span><br><span class="line">    <span class="keyword">if</span> request.method != <span class="string">'POST'</span>:</span><br><span class="line">        <span class="comment"># 显示空的表单</span></span><br><span class="line">        form = UserCreationForm()</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="comment"># 处理好填写的表单</span></span><br><span class="line">        form = UserCreationForm(data=request.POST)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> form.is_valid():</span><br><span class="line">            new_user = form.save()  <span class="comment"># 保存一个新对象</span></span><br><span class="line"></span><br><span class="line">            <span class="comment"># 让用户自动登录，再重定向</span></span><br><span class="line">            <span class="comment"># 第一个密码和第二个密码都可以</span></span><br><span class="line">            authenticated_user = authenticate(username=new_user.username,</span><br><span class="line">                                              password=request.POST[<span class="string">'password1'</span>])  </span><br><span class="line">            </span><br><span class="line">            login(request, authenticated_user)</span><br><span class="line">            <span class="keyword">return</span> HttpResponseRedirect(reverse(<span class="string">'myapp:index'</span>))  <span class="comment"># 登录城后重定向</span></span><br><span class="line"></span><br><span class="line">    context = &#123;<span class="string">'form'</span>: form&#125;</span><br><span class="line">    <span class="keyword">return</span> render(request, <span class="string">'users/register.html'</span>, context)</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;编写注册模型比较复杂，好好理解下。&lt;/p&gt;
+&lt;p&gt;如果数据有效 → 创建新用户对象 &lt;code&gt;new_user&lt;/code&gt; →已验证的用户 &lt;code&gt;authenticated_user = authenticate(username, password)&lt;/code
+      
+    
+    </summary>
+    
+      <category term="Code" scheme="https://ithee.cn/categories/Code/"/>
+    
+    
+      <category term="Python" scheme="https://ithee.cn/tags/Python/"/>
+    
+      <category term="Django" scheme="https://ithee.cn/tags/Django/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Django登录URL模式</title>
+    <link href="https://ithee.cn/archives/c5a9e808.html"/>
+    <id>https://ithee.cn/archives/c5a9e808.html</id>
+    <published>2018-12-15T05:54:00.000Z</published>
+    <updated>2018-12-15T05:59:06.466Z</updated>
+    
+    <content type="html"><![CDATA[<p>登录URL模式不需要编写 <code>views.py</code> ，只需要定义URL模式之后编写 <code>login.html</code> 模板。</p><p><code>users/urls.py</code></p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.contrib.auth.views <span class="keyword">import</span> LoginView</span><br><span class="line"><span class="keyword">from</span> django.urls <span class="keyword">import</span> auth</span><br><span class="line"></span><br><span class="line">app_name = <span class="string">'users'</span></span><br><span class="line"></span><br><span class="line">urlpatterns = [</span><br><span class="line">    <span class="comment"># 登录页面</span></span><br><span class="line">    path(<span class="string">'login/'</span>, LoginView.as_view(template_name=<span class="string">'users/login.html'</span>), name=<span class="string">'login'</span>),</span><br><span class="line">]</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;登录URL模式不需要编写 &lt;code&gt;views.py&lt;/code&gt; ，只需要定义URL模式之后编写 &lt;code&gt;login.html&lt;/code&gt; 模板。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;users/urls.py&lt;/code&gt;&lt;/p&gt;
+&lt;figure class=&quot;highl
+      
+    
+    </summary>
+    
+      <category term="Code" scheme="https://ithee.cn/categories/Code/"/>
+    
+    
+      <category term="Python" scheme="https://ithee.cn/tags/Python/"/>
+    
+      <category term="Django" scheme="https://ithee.cn/tags/Django/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Python Django判断用户是否登录</title>
     <link href="https://ithee.cn/archives/3304cc9e.html"/>
     <id>https://ithee.cn/archives/3304cc9e.html</id>
     <published>2018-12-14T17:01:00.000Z</published>
-    <updated>2018-12-14T17:03:14.183Z</updated>
+    <updated>2018-12-15T05:53:39.254Z</updated>
     
     <content type="html"><![CDATA[<h2 id="在Django里面判断用户是否登录"><a href="#在Django里面判断用户是否登录" class="headerlink" title="在Django里面判断用户是否登录"></a>在Django里面判断用户是否登录</h2><p>如果登录，则输出问候语。否则提供登录入口。</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;% if user.is_authenticated %&#125;</span><br><span class="line">    Hello, &#123;&#123; user.username &#125;&#125;</span><br><span class="line">&#123;% else %&#125;</span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"&#123;% url 'users:login' %&#125;"</span>&gt;</span>登录<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>]]></content>
     
@@ -519,53 +576,6 @@
     <summary type="html">
     
       &lt;p&gt;处理列表中部分元素——切片 区间同 &lt;code&gt;range()&lt;/code&gt; 仍然是左闭右开&lt;code&gt;[m, n)&lt;/code&gt; 可以记忆为元素总个数为 &lt;strong&gt;n-m&lt;/strong&gt;&lt;br&gt;
-    
-    </summary>
-    
-      <category term="Code" scheme="https://ithee.cn/categories/Code/"/>
-    
-    
-      <category term="Python" scheme="https://ithee.cn/tags/Python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Python 学习笔记（四）——复制列表</title>
-    <link href="https://ithee.cn/archives/957d7851.html"/>
-    <id>https://ithee.cn/archives/957d7851.html</id>
-    <published>2018-11-07T04:48:00.000Z</published>
-    <updated>2018-11-07T05:12:26.373Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>1. 第一个例子</strong><br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">a = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>]</span><br><span class="line">b = a </span><br><span class="line"></span><br><span class="line">b.append(<span class="string">'b'</span>)</span><br><span class="line">a.append(<span class="string">'a'</span>)</span><br><span class="line">print(a)</span><br><span class="line">print(b)</span><br></pre></td></tr></table></figure></p><p>结果：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="string">'b'</span>, <span class="string">'a'</span>]</span><br><span class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="string">'b'</span>, <span class="string">'a'</span>]</span><br></pre></td></tr></table></figure></p><a id="more"></a><p><strong>值得注意的是：</strong></p><font color="orange">a直接赋值给b：只是将a的<strong>内存地址</strong>复制到b，绝非a的列表。之后b也可以同样对a的列表进行操作。</font><p><strong>2. 第2个例子</strong><br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">a = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>]</span><br><span class="line">b = a[:]</span><br><span class="line"></span><br><span class="line">a.append(<span class="string">'a'</span>)</span><br><span class="line">b.append(<span class="string">'b'</span>)</span><br><span class="line">print(a)</span><br><span class="line">print(b)</span><br></pre></td></tr></table></figure></p><p>结果：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="string">'a'</span>] </span><br><span class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="string">'b'</span>]</span><br></pre></td></tr></table></figure></p><p><strong>值得注意的是：</strong></p><font color="orange">a的内容（列表）拷贝给b：这使b拥有和a相同的内容（列表），b拥有和a不同的地址</font>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;strong&gt;1. 第一个例子&lt;/strong&gt;&lt;br&gt;&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;a = [&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;b = a &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;b.append(&lt;span class=&quot;string&quot;&gt;&#39;b&#39;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;a.append(&lt;span class=&quot;string&quot;&gt;&#39;a&#39;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;print(a)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;print(b)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;结果：&lt;br&gt;&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;[&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;b&#39;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;a&#39;&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;b&#39;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;a&#39;&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Code" scheme="https://ithee.cn/categories/Code/"/>
-    
-    
-      <category term="Python" scheme="https://ithee.cn/tags/Python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Python 学习笔记（三）——组织列表</title>
-    <link href="https://ithee.cn/archives/e17ffcb4.html"/>
-    <id>https://ithee.cn/archives/e17ffcb4.html</id>
-    <published>2018-11-06T15:21:00.000Z</published>
-    <updated>2018-11-07T05:10:26.757Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>1. sort()方法</strong></p><p><font color="orange">此方法永久性修改列表元素顺序。</font><br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cars = [<span class="string">'c'</span>, <span class="string">'a'</span>, <span class="string">'b'</span>]</span><br><span class="line">cars.sort()</span><br><span class="line">print(cars)</span><br></pre></td></tr></table></figure></p><p>结果： <code>[&#39;a&#39;, &#39;b&#39;, &#39;c&#39;]</code></p><a id="more"></a><p><strong>2. 逆序排列</strong><br>在 <code>sort()</code> 里使用参数 reverse=True<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cars = [<span class="string">'c'</span>, <span class="string">'a'</span>, <span class="string">'b'</span>]</span><br><span class="line">cars.sort(reverse=<span class="keyword">True</span>)</span><br><span class="line">print(cars)</span><br></pre></td></tr></table></figure></p><p>结果： <code>[&#39;c&#39;, &#39;b&#39;, &#39;a&#39;]</code></p><p><strong>3. 函数sorted()对列表「临时」排序</strong></p><p><font color="orange">注意：调用函数sorted() 后，列表元素的排列顺序并没有变。</font><br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cars = [<span class="string">'c'</span>, <span class="string">'a'</span>, <span class="string">'b'</span>]</span><br><span class="line">sorted_cars = sorted(cars)</span><br><span class="line">print(sorted_cars)</span><br><span class="line">print(cars)</span><br></pre></td></tr></table></figure></p><p>结果：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>]</span><br><span class="line">[<span class="string">'c'</span>, <span class="string">'a'</span>, <span class="string">'b'</span>]</span><br></pre></td></tr></table></figure></p><p><strong>4. 倒着打印列表</strong><br><code>reverse()</code> 只是 <strong>反转</strong> 列表元素的排列顺序。区别于<code>sort(reverse=True)</code> —— 先排序，再倒序。很容易理解：对一个列表使用sort()方法后，再对元素进行反转。</p><p><strong>5. 函数len()确定列表长度</strong><br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cars = [<span class="string">'bmw'</span>, <span class="string">'audi'</span>, <span class="string">'toyota'</span>, <span class="string">'subaru'</span>]</span><br><span class="line">length = len(cars)  <span class="comment"># 4 </span></span><br><span class="line">print(length)</span><br></pre></td></tr></table></figure></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;strong&gt;1. sort()方法&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;font color=&quot;orange&quot;&gt;此方法永久性修改列表元素顺序。&lt;/font&gt;&lt;br&gt;&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;cars = [&lt;span class=&quot;string&quot;&gt;&#39;c&#39;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;a&#39;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;b&#39;&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;cars.sort()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;print(cars)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;结果： &lt;code&gt;[&amp;#39;a&amp;#39;, &amp;#39;b&amp;#39;, &amp;#39;c&amp;#39;]&lt;/code&gt;&lt;/p&gt;
     
     </summary>
     
