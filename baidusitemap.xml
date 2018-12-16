@@ -4,11 +4,33 @@
 
     
   <url>
-    <loc>https://ithee.cn/archives/914d7db.html</loc>
-    <lastmod>2018-12-15T16:35:18.921Z</lastmod>
+    <loc>https://ithee.cn/archives/e969eecb.html</loc>
+    <lastmod>2018-12-16T07:33:20.122Z</lastmod>
     <data>
         <display>
-        <title>Django限制登录</title>
+        <title>Git基本操作截图</title>
+        <pubTime>2018-12-04T15:26:00.000Z</pubTime>
+        
+        <tag>github</tag>
+         
+        <tag>git</tag>
+         
+         
+           
+             
+              <breadCrumb title="Code" url="https://ithee.cn/categories/Code/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://ithee.cn/archives/914d7db.html</loc>
+    <lastmod>2018-12-16T07:32:58.461Z</lastmod>
+    <data>
+        <display>
+        <title>Django限制未登录用户访问页面</title>
         <pubTime>2018-12-15T16:25:00.000Z</pubTime>
         
         <tag>Python</tag>
@@ -26,12 +48,12 @@
 
     
   <url>
-    <loc>https://ithee.cn/archives/c5a9e808.html</loc>
-    <lastmod>2018-12-15T06:30:26.490Z</lastmod>
+    <loc>https://ithee.cn/archives/14e45321.html</loc>
+    <lastmod>2018-12-16T07:32:52.244Z</lastmod>
     <data>
         <display>
-        <title>Django登录URL模式</title>
-        <pubTime>2018-12-15T05:54:00.000Z</pubTime>
+        <title>Django注册views函数编写</title>
+        <pubTime>2018-12-15T06:29:00.000Z</pubTime>
         
         <tag>Python</tag>
          
@@ -48,12 +70,34 @@
 
     
   <url>
-    <loc>https://ithee.cn/archives/14e45321.html</loc>
-    <lastmod>2018-12-15T06:30:26.489Z</lastmod>
+    <loc>https://ithee.cn/archives/e0cc259.html</loc>
+    <lastmod>2018-12-16T07:32:42.795Z</lastmod>
     <data>
         <display>
-        <title>Django注册views函数编写</title>
-        <pubTime>2018-12-15T06:29:00.000Z</pubTime>
+        <title>Django关联数据和用户</title>
+        <pubTime>2018-12-16T06:32:00.000Z</pubTime>
+        
+        <tag>Python</tag>
+         
+        <tag>Django</tag>
+         
+         
+           
+             
+              <breadCrumb title="Code" url="https://ithee.cn/categories/Code/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://ithee.cn/archives/c5a9e808.html</loc>
+    <lastmod>2018-12-16T06:28:16.531Z</lastmod>
+    <data>
+        <display>
+        <title>Django登录URL模式</title>
+        <pubTime>2018-12-15T05:54:00.000Z</pubTime>
         
         <tag>Python</tag>
          
@@ -245,28 +289,6 @@
            
              
               <breadCrumb title="English" url="https://ithee.cn/categories/English/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://ithee.cn/archives/e969eecb.html</loc>
-    <lastmod>2018-12-04T15:45:33.895Z</lastmod>
-    <data>
-        <display>
-        <title>Git基本操作截图</title>
-        <pubTime>2018-12-04T15:26:00.000Z</pubTime>
-        
-        <tag>github</tag>
-         
-        <tag>git</tag>
-         
-         
-           
-             
-              <breadCrumb title="Code" url="https://ithee.cn/categories/Code/"/>
           
         </display>
     </data>
