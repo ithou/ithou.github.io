@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ithee.cn/"/>
-  <updated>2018-12-16T07:35:55.895Z</updated>
+  <updated>2018-12-26T13:38:20.087Z</updated>
   <id>https://ithee.cn/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Git/GitHub学习笔记</title>
+    <link href="https://ithee.cn/archives/accf61a.html"/>
+    <id>https://ithee.cn/archives/accf61a.html</id>
+    <published>2018-12-26T13:30:00.000Z</published>
+    <updated>2018-12-26T13:38:20.087Z</updated>
+    
+    <content type="html"><![CDATA[<ol><li><p>设置 <code>Git</code> 使用者的姓名和邮箱，文件保存在 <code>~/.gitconfig</code> </p><p>Windows目录：<code>C:\Users\YOUR_NAME\.gitconfig</code></p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git config --global user.name "Tom"</span><br><span class="line"><span class="meta">$</span> git config --global user.email "qq@qq.com"</span><br></pre></td></tr></table></figure><p>提交时如果担心敏感信息泄露，也可以不适用真实身份。以为它们会被公开。</p></li><li><p>提高命令输出的可读性</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git config --global color.ui auto</span><br></pre></td></tr></table></figure></li><li><p>设置公钥</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> ssh-keygen -t rsa -C "..@.."</span><br></pre></td></tr></table></figure><p><strong>公钥</strong> 保存在 <code>~/.ssh/id_rsa.pub</code></p><p><strong>私钥</strong> 保存在 <code>~/.ssh/id_rsa</code></p></li><li><p>和GitHub认证</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> ssh -T git@github.com</span><br></pre></td></tr></table></figure></li><li><p>一些基本命令</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git init  # 初始化仓库</span><br><span class="line"><span class="meta">$</span> git status  # 查看仓库状态</span><br><span class="line"><span class="meta">$</span> git add FILE_NAME  # 加入暂存区</span><br><span class="line"><span class="meta">$</span> git log  # 提交日志</span><br><span class="line"><span class="meta">$</span> git log FILE_NAME  # 指定文件、目录的日志</span><br><span class="line"><span class="meta">$</span> git log -p  # 显示文件的改动</span><br><span class="line"><span class="meta">$</span> git diff  # 查看提交的区别</span><br><span class="line"><span class="meta">$</span> git diff HEAD  # HEAD是指向分支中最新一次提交的信息</span><br></pre></td></tr></table></figure></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ol&gt;
+&lt;li&gt;&lt;p&gt;设置 &lt;code&gt;Git&lt;/code&gt; 使用者的姓名和邮箱，文件保存在 &lt;code&gt;~/.gitconfig&lt;/code&gt; &lt;/p&gt;
+&lt;p&gt;Windows目录：&lt;code&gt;C:\Users\YOUR_NAME\.gitconfig&lt;/code&gt;&lt;/p&gt;
+&lt;
+      
+    
+    </summary>
+    
+      <category term="Code" scheme="https://ithee.cn/categories/Code/"/>
+    
+    
+      <category term="github" scheme="https://ithee.cn/tags/github/"/>
+    
+      <category term="git" scheme="https://ithee.cn/tags/git/"/>
+    
+  </entry>
   
   <entry>
     <title>Django关联数据和用户</title>
@@ -543,37 +573,6 @@
     
       &lt;p&gt;&lt;strong&gt;字典&lt;/strong&gt; 包含N个键值对。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;1. 一个外星人&lt;/strong&gt;&lt;br&gt;&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;alien_0 = &amp;#123;&lt;span class=&quot;string&quot;&gt;&#39;color&#39;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&#39;green&#39;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;points&#39;&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;print(alien_0[&lt;span class=&quot;string&quot;&gt;&#39;color&#39;&lt;/span&gt;])&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;print(alien_0[&lt;span class=&quot;string&quot;&gt;&#39;points&#39;&lt;/span&gt;])&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Code" scheme="https://ithee.cn/categories/Code/"/>
-    
-    
-      <category term="Python" scheme="https://ithee.cn/tags/Python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Python 学习笔记 零 ——代码风格</title>
-    <link href="https://ithee.cn/archives/c06cbf1d.html"/>
-    <id>https://ithee.cn/archives/c06cbf1d.html</id>
-    <published>2018-11-07T05:48:00.000Z</published>
-    <updated>2018-11-07T07:03:35.453Z</updated>
-    
-    <content type="html"><![CDATA[<ol><li><p>风格如影随形，因人而异，但是有一个统一的<code>PEP 8</code>风格</p></li><li><p>变量命明易懂是一种习惯，默默遵守，方便自己，方便他人 </p></li><li><p>尽量少使用abc…一类的无意义变量名</p></li><li><p><code>PEP 8</code> 建议每级缩进都使用<code>4</code>个空格（编辑器中为一个<code>tab</code>键）</p></li><li><p>绝对不要混用 <code>tab</code> 和空格，使用任何编辑器写<code>Python</code>，请把一个 <code>tab</code>展开为 <code>4</code> 个空格   </p></li><li><p>行长：最多<code>80</code>字符，最长最长不超过编辑器右边的<strong>竖线</strong>——不可逾越的红线</p></li></ol>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;ol&gt;
-&lt;li&gt;&lt;p&gt;风格如影随形，因人而异，但是有一个统一的&lt;code&gt;PEP 8&lt;/code&gt;风格&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;变量命明易懂是一种习惯，默默遵守，方便自己，方便他人 &lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;尽量少使用abc…一类的无意义变量名&lt;/p&gt;
-&lt;/
-      
     
     </summary>
     
