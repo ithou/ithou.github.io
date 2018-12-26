@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>https://ithee.cn/archives/e0cc259.html</loc>
+    <lastmod>2018-12-16T07:35:55.895Z</lastmod>
+    <data>
+        <display>
+        <title>Django关联数据和用户</title>
+        <pubTime>2018-12-16T06:32:00.000Z</pubTime>
+        
+        <tag>Python</tag>
+         
+        <tag>Django</tag>
+         
+         
+           
+             
+              <breadCrumb title="Code" url="https://ithee.cn/categories/Code/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://ithee.cn/archives/e969eecb.html</loc>
     <lastmod>2018-12-16T07:33:20.122Z</lastmod>
     <data>
@@ -54,28 +76,6 @@
         <display>
         <title>Django注册views函数编写</title>
         <pubTime>2018-12-15T06:29:00.000Z</pubTime>
-        
-        <tag>Python</tag>
-         
-        <tag>Django</tag>
-         
-         
-           
-             
-              <breadCrumb title="Code" url="https://ithee.cn/categories/Code/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://ithee.cn/archives/e0cc259.html</loc>
-    <lastmod>2018-12-16T07:32:42.795Z</lastmod>
-    <data>
-        <display>
-        <title>Django关联数据和用户</title>
-        <pubTime>2018-12-16T06:32:00.000Z</pubTime>
         
         <tag>Python</tag>
          
